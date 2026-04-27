@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["PP", "PP", "PP"],
+  "key": {
+    "P": {"item": "candycraftreborn:waffle_nugget"}
+  },
+  "result": {"item": "candycraftreborn:waffle", "count": 1}
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {"item": "candycraftreborn:dynamite"},
+    {"item": "candycraftreborn:chewing_gum"}
+  ],
+  "result": {"item": "candycraftreborn:glue_dynamite", "count": 1}
+}

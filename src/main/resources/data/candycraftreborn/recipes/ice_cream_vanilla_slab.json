@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP"
+  ],
+  "key": {
+    "P": {"item": "candycraftreborn:ice_cream_vanilla"}
+  },
+  "result": {
+    "item": "candycraftreborn:ice_cream_vanilla_slab",
+    "count": 6
+  }
+}

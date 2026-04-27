@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["PPP", "POP"],
+  "key": {
+    "P": {"item": "candycraftreborn:sugar_crystal"},
+    "O": {"item": "candycraftreborn:cranberry_scale"}
+  },
+  "result": {"item": "candycraftreborn:water_mask", "count": 1}
+}

@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {"item": "candycraftreborn:marshmallow_stick"}
+  ],
+  "result": {
+    "item": "minecraft:stick",
+    "count": 1
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "axis=x": { "model": "candycraftreborn:block/candy_portal_ns" },
+    "axis=z": { "model": "candycraftreborn:block/candy_portal_ew" }
+  }
+}

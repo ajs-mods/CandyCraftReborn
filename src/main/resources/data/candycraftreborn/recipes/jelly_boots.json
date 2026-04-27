@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["P P", "O O"],
+  "key": {
+    "P": {"item": "candycraftreborn:sugar_crystal"},
+    "O": {"item": "candycraftreborn:jelly_shock_absorber"}
+  },
+  "result": {"item": "candycraftreborn:jelly_boots", "count": 1}
+}

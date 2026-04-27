@@ -1,0 +1,32 @@
+{
+  "replace": false,
+  "values": [
+    "candycraftreborn:chocolate_stone",
+    "candycraftreborn:chocolate_cobblestone",
+    "candycraftreborn:honey_ore",
+    "candycraftreborn:licorice_ore",
+    "candycraftreborn:jelly_ore",
+    "candycraftreborn:nougat_ore",
+    "candycraftreborn:pez_ore",
+    "candycraftreborn:rock_candy_block",
+    "candycraftreborn:licorice_block",
+    "candycraftreborn:licorice_brick",
+    "candycraftreborn:licorice_brick_stairs",
+    "candycraftreborn:licorice_brick_slab",
+    "candycraftreborn:caramel_block",
+    "candycraftreborn:caramel_brick",
+    "candycraftreborn:caramel_brick_stairs",
+    "candycraftreborn:caramel_brick_slab",
+    "candycraftreborn:chocolate_cobble_stairs",
+    "candycraftreborn:chocolate_cobble_slab",
+    "candycraftreborn:chocolate_cobble_wall",
+    "candycraftreborn:chocolate_stone_stairs",
+    "candycraftreborn:chocolate_stone_slab",
+    "candycraftreborn:pez_block",
+    "candycraftreborn:honey_block_cc",
+    "candycraftreborn:jaw_breaker_block",
+    "candycraftreborn:jaw_breaker_light",
+    "candycraftreborn:nougat_head",
+    "candycraftreborn:honey_lamp"
+  ]
+}

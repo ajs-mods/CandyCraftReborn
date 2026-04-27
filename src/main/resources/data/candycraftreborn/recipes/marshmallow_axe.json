@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["LL", "LP", " P"],
+  "key": {
+    "L": {"item": "candycraftreborn:marshmallow_planks_1"},
+    "P": {"item": "candycraftreborn:marshmallow_stick"}
+  },
+  "result": {"item": "candycraftreborn:marshmallow_axe", "count": 1}
+}

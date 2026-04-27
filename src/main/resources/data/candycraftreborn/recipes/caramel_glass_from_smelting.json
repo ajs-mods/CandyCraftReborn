@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {"item": "candycraftreborn:caramel_block"},
+  "result": "candycraftreborn:caramel_glass_0",
+  "experience": 0.7,
+  "cookingtime": 200
+}

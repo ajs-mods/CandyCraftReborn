@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "LL"
+  ],
+  "key": {
+    "L": {"item": "candycraftreborn:sugar_crystal"}
+  },
+  "result": {
+    "item": "candycraftreborn:sugar_spikes",
+    "count": 8
+  }
+}

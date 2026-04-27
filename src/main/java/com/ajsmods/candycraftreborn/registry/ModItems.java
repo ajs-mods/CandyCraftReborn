@@ -99,8 +99,51 @@ public final class ModItems {
     public static final RegistryObject<Item> GUMMY_BALL = ITEMS.register("gummy_ball",
         () -> new Item(new Item.Properties().stacksTo(16)));
 
-    public static final RegistryObject<Item> CANDY_CRITTER_SPAWN_EGG = ITEMS.register("candy_critter_spawn_egg",
-        () -> new ForgeSpawnEggItem(ModEntities.CANDY_CRITTER, 0xB26BFF, 0xFFF6BD, new Item.Properties()));
+    public static final RegistryObject<Item> CANDY_PIG_SPAWN_EGG = ITEMS.register("candy_pig_spawn_egg",
+        () -> new ForgeSpawnEggItem(ModEntities.CANDY_PIG, 0xFFB6C1, 0xFFF0F5, new Item.Properties()));
+    public static final RegistryObject<Item> WAFFLE_SHEEP_SPAWN_EGG = ITEMS.register("waffle_sheep_spawn_egg",
+        () -> new ForgeSpawnEggItem(ModEntities.WAFFLE_SHEEP, 0xD2691E, 0xFFDEAD, new Item.Properties()));
+    public static final RegistryObject<Item> BUNNY_SPAWN_EGG = ITEMS.register("bunny_spawn_egg",
+        () -> new ForgeSpawnEggItem(ModEntities.BUNNY, 0x90EE90, 0xFFFFE0, new Item.Properties()));
+    public static final RegistryObject<Item> PINGOUIN_SPAWN_EGG = ITEMS.register("pingouin_spawn_egg",
+        () -> new ForgeSpawnEggItem(ModEntities.PINGOUIN, 0x4169E1, 0xFFFFFF, new Item.Properties()));
+    public static final RegistryObject<Item> CANDY_FISH_SPAWN_EGG = ITEMS.register("candy_fish_spawn_egg",
+        () -> new ForgeSpawnEggItem(ModEntities.CANDY_FISH, 0xFF6347, 0xFF4500, new Item.Properties()));
+    public static final RegistryObject<Item> CANDY_CREEPER_SPAWN_EGG = ITEMS.register("candy_creeper_spawn_egg",
+        () -> new ForgeSpawnEggItem(ModEntities.CANDY_CREEPER, 0x32CD32, 0xFFA500, new Item.Properties()));
+    public static final RegistryObject<Item> COTTON_CANDY_SPIDER_SPAWN_EGG = ITEMS.register("cotton_candy_spider_spawn_egg",
+        () -> new ForgeSpawnEggItem(ModEntities.COTTON_CANDY_SPIDER, 0xFF69B4, 0xFF1493, new Item.Properties()));
+    public static final RegistryObject<Item> BEETLE_SPAWN_EGG = ITEMS.register("beetle_spawn_egg",
+        () -> new ForgeSpawnEggItem(ModEntities.BEETLE, 0x8B4513, 0xD2691E, new Item.Properties()));
+    public static final RegistryObject<Item> SUGUARD_SPAWN_EGG = ITEMS.register("suguard_spawn_egg",
+        () -> new ForgeSpawnEggItem(ModEntities.SUGUARD, 0xFFFFFF, 0xADD8E6, new Item.Properties()));
+    public static final RegistryObject<Item> CANDY_BEE_SPAWN_EGG = ITEMS.register("candy_bee_spawn_egg",
+        () -> new ForgeSpawnEggItem(ModEntities.CANDY_BEE, 0xFFD700, 0x000000, new Item.Properties()));
+    public static final RegistryObject<Item> JELLY_SPAWN_EGG = ITEMS.register("jelly_spawn_egg",
+        () -> new ForgeSpawnEggItem(ModEntities.JELLY, 0x00FF00, 0x228B22, new Item.Properties()));
+    public static final RegistryObject<Item> YELLOW_JELLY_SPAWN_EGG = ITEMS.register("yellow_jelly_spawn_egg",
+        () -> new ForgeSpawnEggItem(ModEntities.YELLOW_JELLY, 0xFFFF00, 0xFFD700, new Item.Properties()));
+    public static final RegistryObject<Item> RED_JELLY_SPAWN_EGG = ITEMS.register("red_jelly_spawn_egg",
+        () -> new ForgeSpawnEggItem(ModEntities.RED_JELLY, 0xFF0000, 0x8B0000, new Item.Properties()));
+    public static final RegistryObject<Item> TORNADO_JELLY_SPAWN_EGG = ITEMS.register("tornado_jelly_spawn_egg",
+        () -> new ForgeSpawnEggItem(ModEntities.TORNADO_JELLY, 0x800080, 0x4B0082, new Item.Properties()));
+    // Wave 2 spawn eggs
+    public static final RegistryObject<Item> CANDY_WOLF_SPAWN_EGG = ITEMS.register("candy_wolf_spawn_egg",
+        () -> new ForgeSpawnEggItem(ModEntities.CANDY_WOLF, 0xD2B48C, 0xFF69B4, new Item.Properties()));
+    public static final RegistryObject<Item> GINGER_BREAD_MAN_SPAWN_EGG = ITEMS.register("ginger_bread_man_spawn_egg",
+        () -> new ForgeSpawnEggItem(ModEntities.GINGER_BREAD_MAN, 0xCD853F, 0x8B4513, new Item.Properties()));
+    public static final RegistryObject<Item> NOUGAT_GOLEM_SPAWN_EGG = ITEMS.register("nougat_golem_spawn_egg",
+        () -> new ForgeSpawnEggItem(ModEntities.NOUGAT_GOLEM, 0xF5DEB3, 0xDEB887, new Item.Properties()));
+    public static final RegistryObject<Item> MAGE_SUGUARD_SPAWN_EGG = ITEMS.register("mage_suguard_spawn_egg",
+        () -> new ForgeSpawnEggItem(ModEntities.MAGE_SUGUARD, 0xFFFFFF, 0x8A2BE2, new Item.Properties()));
+    public static final RegistryObject<Item> MERMAID_SPAWN_EGG = ITEMS.register("mermaid_spawn_egg",
+        () -> new ForgeSpawnEggItem(ModEntities.MERMAID, 0x00CED1, 0x20B2AA, new Item.Properties()));
+    public static final RegistryObject<Item> NESSIE_SPAWN_EGG = ITEMS.register("nessie_spawn_egg",
+        () -> new ForgeSpawnEggItem(ModEntities.NESSIE, 0x2E8B57, 0x006400, new Item.Properties()));
+    public static final RegistryObject<Item> DRAGON_SPAWN_EGG = ITEMS.register("dragon_spawn_egg",
+        () -> new ForgeSpawnEggItem(ModEntities.DRAGON, 0xFF4500, 0x8B0000, new Item.Properties()));
+    public static final RegistryObject<Item> KING_BEETLE_SPAWN_EGG = ITEMS.register("king_beetle_spawn_egg",
+        () -> new ForgeSpawnEggItem(ModEntities.KING_BEETLE, 0x556B2F, 0x2F4F4F, new Item.Properties()));
 
     // ── Marshmallow Tools ────────────────────────────────────────────────────
     public static final RegistryObject<Item> MARSHMALLOW_SWORD = ITEMS.register("marshmallow_sword",

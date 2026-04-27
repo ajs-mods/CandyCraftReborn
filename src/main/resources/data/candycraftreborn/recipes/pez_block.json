@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP",
+    "PPP",
+    "PPP"
+  ],
+  "key": {
+    "P": {"item": "candycraftreborn:pez"}
+  },
+  "result": {
+    "item": "candycraftreborn:pez_block",
+    "count": 1
+  }
+}

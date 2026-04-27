@@ -1,0 +1,19 @@
+{
+  "replace": false,
+  "values": [
+    "candycraftreborn:marshmallow_slab",
+    "candycraftreborn:marshmallow_slab_1",
+    "candycraftreborn:marshmallow_slab_2",
+    "candycraftreborn:candy_cane_slab",
+    "candycraftreborn:licorice_brick_slab",
+    "candycraftreborn:chocolate_stone_slab",
+    "candycraftreborn:caramel_slab",
+    "candycraftreborn:cotton_candy_slab",
+    "candycraftreborn:chocolate_cobble_slab",
+    "candycraftreborn:caramel_brick_slab",
+    "candycraftreborn:ice_cream_vanilla_slab",
+    "candycraftreborn:ice_cream_strawberry_slab",
+    "candycraftreborn:ice_cream_chocolate_slab",
+    "candycraftreborn:ice_cream_mint_slab"
+  ]
+}

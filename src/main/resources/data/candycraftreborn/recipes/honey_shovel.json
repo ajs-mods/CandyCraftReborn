@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["L", "P", "P"],
+  "key": {
+    "L": {"item": "candycraftreborn:honeycomb"},
+    "P": {"item": "candycraftreborn:marshmallow_stick"}
+  },
+  "result": {"item": "candycraftreborn:honey_shovel", "count": 1}
+}

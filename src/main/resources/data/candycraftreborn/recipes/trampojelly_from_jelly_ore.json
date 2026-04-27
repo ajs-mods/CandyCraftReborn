@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {"item": "candycraftreborn:jelly_ore"},
+  "result": "candycraftreborn:trampojelly",
+  "experience": 1.0,
+  "cookingtime": 200
+}

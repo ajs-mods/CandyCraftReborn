@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PP"
+  ],
+  "key": {
+    "P": {"item": "candycraftreborn:chewing_gum"}
+  },
+  "result": {
+    "item": "candycraftreborn:chewing_gum_puddle",
+    "count": 1
+  }
+}

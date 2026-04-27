@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {"item": "candycraftreborn:licorice_ore"},
+  "result": "candycraftreborn:licorice",
+  "experience": 1.0,
+  "cookingtime": 200
+}

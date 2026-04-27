@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "P  ",
+    "PP ",
+    "PPP"
+  ],
+  "key": {
+    "P": {"item": "candycraftreborn:ice_cream_mint"}
+  },
+  "result": {
+    "item": "candycraftreborn:ice_cream_mint_stairs",
+    "count": 4
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "parent": "candycraftreborn:get_pez",
+  "display": {
+    "icon": { "item": "candycraftreborn:pez_helmet" },
+    "title": { "translate": "advancement.candycraftreborn.full_pez_armor" },
+    "description": { "translate": "advancement.candycraftreborn.full_pez_armor.description" },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "criteria": {
+    "full_pez_armor": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "items": ["candycraftreborn:pez_helmet"] },
+          { "items": ["candycraftreborn:pez_plate"] },
+          { "items": ["candycraftreborn:pez_leggings"] },
+          { "items": ["candycraftreborn:pez_boots"] }
+        ]
+      }
+    }
+  }
+}

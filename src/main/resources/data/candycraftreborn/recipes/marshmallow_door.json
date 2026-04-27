@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "LL",
+    "LL",
+    "LL"
+  ],
+  "key": {
+    "L": {"item": "candycraftreborn:marshmallow_planks_1"}
+  },
+  "result": {
+    "item": "candycraftreborn:marshmallow_door",
+    "count": 1
+  }
+}

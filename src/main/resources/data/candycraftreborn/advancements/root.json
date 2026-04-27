@@ -1,0 +1,18 @@
+{
+  "display": {
+    "icon": { "item": "candycraftreborn:sugar_crystal" },
+    "title": { "translate": "advancement.candycraftreborn.root" },
+    "description": { "translate": "advancement.candycraftreborn.root.description" },
+    "background": "candycraftreborn:textures/block/pudding.png",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "criteria": {
+    "enter_candy_world": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "candycraftreborn:candy_world"
+      }
+    }
+  }
+}

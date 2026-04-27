@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["LLL", "L L"],
+  "key": {
+    "L": {"item": "candycraftreborn:honeycomb"}
+  },
+  "result": {"item": "candycraftreborn:honey_helmet", "count": 1}
+}

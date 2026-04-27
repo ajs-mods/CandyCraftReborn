@@ -1,0 +1,34 @@
+{
+  "entity.nessie.ambient": {
+    "subtitle": "subtitles.candycraftreborn.entity.nessie.ambient",
+    "sounds": [
+      "candycraftreborn:entity/nessie/ambient"
+    ]
+  },
+  "entity.nessie.hurt": {
+    "subtitle": "subtitles.candycraftreborn.entity.nessie.hurt",
+    "sounds": [
+      "candycraftreborn:entity/nessie/hurt"
+    ]
+  },
+  "music.record_1": {
+    "sounds": [
+      { "name": "candycraftreborn:music/record_1", "stream": true }
+    ]
+  },
+  "music.record_2": {
+    "sounds": [
+      { "name": "candycraftreborn:music/record_2", "stream": true }
+    ]
+  },
+  "music.record_3": {
+    "sounds": [
+      { "name": "candycraftreborn:music/record_3", "stream": true }
+    ]
+  },
+  "music.record_4": {
+    "sounds": [
+      { "name": "candycraftreborn:music/record_4", "stream": true }
+    ]
+  }
+}

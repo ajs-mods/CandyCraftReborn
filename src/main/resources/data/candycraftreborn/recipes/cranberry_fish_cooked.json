@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {"item": "candycraftreborn:cranberry_fish"},
+  "result": "candycraftreborn:cranberry_fish_cooked",
+  "experience": 0.7,
+  "cookingtime": 200
+}

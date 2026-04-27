@@ -1,0 +1,18 @@
+{
+  "parent": "candycraftreborn:root",
+  "display": {
+    "icon": { "item": "candycraftreborn:honeycomb" },
+    "title": { "translate": "advancement.candycraftreborn.get_honeycomb" },
+    "description": { "translate": "advancement.candycraftreborn.get_honeycomb.description" },
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "criteria": {
+    "get_honeycomb": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [{ "items": ["candycraftreborn:honeycomb"] }]
+      }
+    }
+  }
+}

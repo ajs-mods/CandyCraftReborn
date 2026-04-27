@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {"item": "candycraftreborn:pez_ore"},
+  "result": "candycraftreborn:pez",
+  "experience": 1.0,
+  "cookingtime": 200
+}

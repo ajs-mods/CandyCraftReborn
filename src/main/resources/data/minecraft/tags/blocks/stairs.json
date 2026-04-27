@@ -1,0 +1,19 @@
+{
+  "replace": false,
+  "values": [
+    "candycraftreborn:marshmallow_stairs",
+    "candycraftreborn:marshmallow_stairs_1",
+    "candycraftreborn:marshmallow_stairs_2",
+    "candycraftreborn:candy_cane_stairs",
+    "candycraftreborn:licorice_brick_stairs",
+    "candycraftreborn:chocolate_stone_stairs",
+    "candycraftreborn:caramel_stairs",
+    "candycraftreborn:cotton_candy_stairs",
+    "candycraftreborn:chocolate_cobble_stairs",
+    "candycraftreborn:caramel_brick_stairs",
+    "candycraftreborn:ice_cream_vanilla_stairs",
+    "candycraftreborn:ice_cream_strawberry_stairs",
+    "candycraftreborn:ice_cream_chocolate_stairs",
+    "candycraftreborn:ice_cream_mint_stairs"
+  ]
+}

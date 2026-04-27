@@ -254,7 +254,28 @@ public final class ModCreativeTabs {
                         // Machines
                         output.accept(ModBlocks.ALCHEMY_TABLE.get());
                         // Entities
-                        output.accept(ModItems.CANDY_CRITTER_SPAWN_EGG.get());
+                        output.accept(ModItems.CANDY_PIG_SPAWN_EGG.get());
+                        output.accept(ModItems.WAFFLE_SHEEP_SPAWN_EGG.get());
+                        output.accept(ModItems.BUNNY_SPAWN_EGG.get());
+                        output.accept(ModItems.PINGOUIN_SPAWN_EGG.get());
+                        output.accept(ModItems.CANDY_FISH_SPAWN_EGG.get());
+                        output.accept(ModItems.CANDY_CREEPER_SPAWN_EGG.get());
+                        output.accept(ModItems.COTTON_CANDY_SPIDER_SPAWN_EGG.get());
+                        output.accept(ModItems.BEETLE_SPAWN_EGG.get());
+                        output.accept(ModItems.SUGUARD_SPAWN_EGG.get());
+                        output.accept(ModItems.CANDY_BEE_SPAWN_EGG.get());
+                        output.accept(ModItems.JELLY_SPAWN_EGG.get());
+                        output.accept(ModItems.YELLOW_JELLY_SPAWN_EGG.get());
+                        output.accept(ModItems.RED_JELLY_SPAWN_EGG.get());
+                        output.accept(ModItems.TORNADO_JELLY_SPAWN_EGG.get());
+                        output.accept(ModItems.CANDY_WOLF_SPAWN_EGG.get());
+                        output.accept(ModItems.GINGER_BREAD_MAN_SPAWN_EGG.get());
+                        output.accept(ModItems.NOUGAT_GOLEM_SPAWN_EGG.get());
+                        output.accept(ModItems.MAGE_SUGUARD_SPAWN_EGG.get());
+                        output.accept(ModItems.MERMAID_SPAWN_EGG.get());
+                        output.accept(ModItems.NESSIE_SPAWN_EGG.get());
+                        output.accept(ModItems.DRAGON_SPAWN_EGG.get());
+                        output.accept(ModItems.KING_BEETLE_SPAWN_EGG.get());
                     })
                     .build());
 

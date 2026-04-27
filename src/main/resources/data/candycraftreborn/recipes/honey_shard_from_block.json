@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {"item": "candycraftreborn:honey_block_cc"}
+  ],
+  "result": {
+    "item": "candycraftreborn:honey_shard",
+    "count": 9
+  }
+}

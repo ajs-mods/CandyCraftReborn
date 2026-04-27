@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["  P", " P ", "C  "],
+  "key": {
+    "P": {"item": "candycraftreborn:honey_shard"},
+    "C": {"item": "candycraftreborn:candy_cane"}
+  },
+  "result": {"item": "candycraftreborn:honey_bolt", "count": 1}
+}

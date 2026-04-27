@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["PCP", "PCP", "PCP"],
+  "key": {
+    "P": {"item": "candycraftreborn:waffle_nugget"},
+    "C": {"item": "candycraftreborn:nougat_powder"}
+  },
+  "result": {"item": "candycraftreborn:dynamite", "count": 3}
+}

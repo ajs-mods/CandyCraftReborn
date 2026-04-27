@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["LLL", " P ", " P "],
+  "key": {
+    "L": {"item": "candycraftreborn:pez"},
+    "P": {"item": "candycraftreborn:marshmallow_stick"}
+  },
+  "result": {"item": "candycraftreborn:pez_pickaxe", "count": 1}
+}

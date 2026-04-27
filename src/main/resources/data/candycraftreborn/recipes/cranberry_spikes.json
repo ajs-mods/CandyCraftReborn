@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "LL"
+  ],
+  "key": {
+    "L": {"item": "candycraftreborn:cranberry_scale"}
+  },
+  "result": {
+    "item": "candycraftreborn:cranberry_spikes",
+    "count": 2
+  }
+}

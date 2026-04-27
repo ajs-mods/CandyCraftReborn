@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP",
+    "PPP"
+  ],
+  "key": {
+    "P": {"item": "candycraftreborn:chocolate_cobblestone"}
+  },
+  "result": {
+    "item": "candycraftreborn:chocolate_cobble_wall",
+    "count": 2
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP"
+  ],
+  "key": {
+    "P": {"item": "candycraftreborn:licorice_brick"}
+  },
+  "result": {
+    "item": "candycraftreborn:licorice_brick_slab",
+    "count": 6
+  }
+}

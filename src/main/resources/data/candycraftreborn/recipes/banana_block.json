@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PP",
+    "PP"
+  ],
+  "key": {
+    "P": {"item": "candycraftreborn:banana_seaweed"}
+  },
+  "result": {
+    "item": "candycraftreborn:banana_block",
+    "count": 1
+  }
+}

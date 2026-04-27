@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PP",
+    "PP"
+  ],
+  "key": {
+    "P": {"item": "candycraftreborn:cotton_candy"}
+  },
+  "result": {
+    "item": "candycraftreborn:cotton_candy_block",
+    "count": 4
+  }
+}

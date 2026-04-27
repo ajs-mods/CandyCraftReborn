@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["L ", " D"],
+  "key": {
+    "L": {"item": "minecraft:fishing_rod"},
+    "D": {"item": "candycraftreborn:dragibus"}
+  },
+  "result": {"item": "candycraftreborn:dragibus_stick", "count": 1}
+}

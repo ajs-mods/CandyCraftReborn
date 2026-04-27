@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["L L", "L L"],
+  "key": {
+    "L": {"item": "candycraftreborn:pez"}
+  },
+  "result": {"item": "candycraftreborn:pez_boots", "count": 1}
+}

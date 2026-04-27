@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP",
+    "PPP"
+  ],
+  "key": {
+    "P": {"item": "candycraftreborn:caramel_glass_2"}
+  },
+  "result": {
+    "item": "candycraftreborn:caramel_pane_2",
+    "count": 16
+  }
+}

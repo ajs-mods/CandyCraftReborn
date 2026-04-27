@@ -1,0 +1,95 @@
+{
+  "has_precipitation": true,
+  "temperature": 0.8,
+  "downfall": 0.4,
+  "effects": {
+    "fog_color": 16636119,
+    "water_color": 4159076,
+    "water_fog_color": 329011,
+    "sky_color": 16636119,
+    "foliage_color": 16737894,
+    "grass_color": 15641275
+  },
+  "spawners": {
+    "monster": [
+      {
+        "type": "candycraftreborn:cotton_candy_spider",
+        "weight": 100,
+        "minCount": 4,
+        "maxCount": 4
+      },
+      {
+        "type": "candycraftreborn:candy_creeper",
+        "weight": 100,
+        "minCount": 8,
+        "maxCount": 15
+      },
+      {
+        "type": "candycraftreborn:suguard",
+        "weight": 100,
+        "minCount": 4,
+        "maxCount": 4
+      }
+    ],
+    "creature": [
+      {
+        "type": "candycraftreborn:candy_pig",
+        "weight": 40,
+        "minCount": 4,
+        "maxCount": 6
+      },
+      {
+        "type": "candycraftreborn:bunny",
+        "weight": 55,
+        "minCount": 4,
+        "maxCount": 6
+      },
+      {
+        "type": "candycraftreborn:waffle_sheep",
+        "weight": 12,
+        "minCount": 4,
+        "maxCount": 4
+      },
+      {
+        "type": "candycraftreborn:candy_bee",
+        "weight": 40,
+        "minCount": 2,
+        "maxCount": 3
+      }
+    ],
+    "ambient": [],
+    "axolotls": [],
+    "underground_water_creature": [],
+    "water_creature": [],
+    "water_ambient": [],
+    "misc": []
+  },
+  "spawn_costs": {},
+  "carvers": {},
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      "candycraftreborn:ore_honey",
+      "candycraftreborn:ore_licorice",
+      "candycraftreborn:ore_jelly",
+      "candycraftreborn:ore_nougat",
+      "candycraftreborn:ore_pez",
+      "candycraftreborn:ore_chocolate_cobblestone",
+      "candycraftreborn:ore_flour"
+    ],
+    [],
+    [
+      "candycraftreborn:candy_grass",
+      "candycraftreborn:candy_flowers",
+      "candycraftreborn:lollipop_patch",
+      "candycraftreborn:cherry_patch"
+    ],
+    []
+  ]
+}

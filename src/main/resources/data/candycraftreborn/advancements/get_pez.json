@@ -1,0 +1,18 @@
+{
+  "parent": "candycraftreborn:get_honeycomb",
+  "display": {
+    "icon": { "item": "candycraftreborn:pez" },
+    "title": { "translate": "advancement.candycraftreborn.get_pez" },
+    "description": { "translate": "advancement.candycraftreborn.get_pez.description" },
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "criteria": {
+    "get_pez": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [{ "items": ["candycraftreborn:pez"] }]
+      }
+    }
+  }
+}

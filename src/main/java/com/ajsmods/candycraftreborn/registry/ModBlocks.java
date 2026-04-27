@@ -2,6 +2,8 @@ package com.ajsmods.candycraftreborn.registry;
 
 import com.ajsmods.candycraftreborn.CandyCraftMod;
 import com.ajsmods.candycraftreborn.block.AlchemyTableBlock;
+import com.ajsmods.candycraftreborn.block.CandyPortalBlock;
+import com.ajsmods.candycraftreborn.block.SugarBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -78,7 +80,7 @@ public final class ModBlocks {
                 .sound(SoundType.MUD)));
 
         public static final RegistryObject<Block> SUGAR_BLOCK = registerBlock("sugar_block",
-            () -> new Block(BlockBehaviour.Properties.of()
+            () -> new SugarBlock(BlockBehaviour.Properties.of()
                 .mapColor(MapColor.SAND)
                 .strength(0.4F)
                 .sound(SoundType.SAND)));
@@ -618,6 +620,15 @@ public final class ModBlocks {
     public static final RegistryObject<Block> SUGUARD_BOSS_KEY_HOLE = registerBlock("suguard_boss_key_hole",
             () -> new Block(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.TERRACOTTA_WHITE).strength(-1.0F, 3600000.0F).sound(SoundType.STONE)));
+
+    // ── Portal ──────────────────────────────────────────────────────────────
+    // Registered without a BlockItem — portal blocks are not obtainable
+    public static final RegistryObject<Block> CANDY_PORTAL = BLOCKS.register("candy_portal",
+            () -> new CandyPortalBlock(BlockBehaviour.Properties.of()
+                    .noCollission().noLootTable()
+                    .strength(-1.0F)
+                    .sound(SoundType.GLASS)
+                    .lightLevel(state -> 11)));
 
     private ModBlocks() {
     }
