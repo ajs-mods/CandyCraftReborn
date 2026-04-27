@@ -143,12 +143,12 @@ Sprint Goal:
 Ship a vertical slice proving the rebuild architecture is production-viable.
 
 Backlog:
-- [ ] Add 10 representative blocks from legacy design set.
-- [ ] Add 10 representative items from legacy design set.
+- [x] Add 10 representative blocks from legacy design set.
+- [x] Add 10 representative items from legacy design set.
 - [ ] Add 1 basic machine block entity + menu + screen.
 - [ ] Add 1 migrated entity with spawn egg and renderer.
-- [ ] Add recipes and data assets for migrated content.
-- [ ] Run compile + runClient validation.
+- [x] Add recipes and data assets for migrated content.
+- [x] Run compile + runClient validation.
 
 Definition of Done:
 - Content appears in-game with textures and names.
@@ -163,3 +163,4 @@ Definition of Done:
 ## Change Log
 - 2026-04-27: Initial rebuild plan created from legacy inventory and migration analysis.
 - 2026-04-27: Phase 1 vertical slice implemented (3 blocks, 3 items, 1 entity, recipes/assets) and migration matrix added.
+- 2026-04-27: Added representative migration batch (10 blocks, 10 items) with blockstates/models/lang/loot and compile validation.

@@ -36,6 +36,66 @@ public final class ModBlocks {
                     .strength(1.0F)
                     .sound(SoundType.HONEY_BLOCK)));
 
+        public static final RegistryObject<Block> LICORICE_BLOCK = registerBlock("licorice_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                .mapColor(MapColor.COLOR_BLACK)
+                .strength(5.0F, 8.0F)
+                .sound(SoundType.METAL)));
+
+        public static final RegistryObject<Block> CANDY_CANE_BLOCK = registerBlock("candy_cane_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                .mapColor(MapColor.COLOR_RED)
+                .strength(1.2F)
+                .sound(SoundType.WOOD)));
+
+        public static final RegistryObject<Block> CARAMEL_BLOCK = registerBlock("caramel_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                .mapColor(MapColor.COLOR_ORANGE)
+                .strength(2.0F, 4.0F)
+                .sound(SoundType.MUD)));
+
+        public static final RegistryObject<Block> SUGAR_BLOCK = registerBlock("sugar_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                .mapColor(MapColor.SAND)
+                .strength(0.4F)
+                .sound(SoundType.SAND)));
+
+        public static final RegistryObject<Block> CHOCOLATE_STONE = registerBlock("chocolate_stone",
+            () -> new Block(BlockBehaviour.Properties.of()
+                .mapColor(MapColor.COLOR_BROWN)
+                .strength(1.8F, 6.0F)
+                .sound(SoundType.STONE)));
+
+        public static final RegistryObject<Block> COTTON_CANDY_BLOCK = registerBlock("cotton_candy_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                .mapColor(MapColor.COLOR_PINK)
+                .strength(0.3F)
+                .sound(SoundType.WOOL)));
+
+        public static final RegistryObject<Block> MINT_BLOCK = registerBlock("mint_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                .mapColor(MapColor.COLOR_LIGHT_GREEN)
+                .strength(1.0F)
+                .sound(SoundType.GRASS)));
+
+        public static final RegistryObject<Block> RASPBERRY_BLOCK = registerBlock("raspberry_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                .mapColor(MapColor.COLOR_RED)
+                .strength(1.0F)
+                .sound(SoundType.GRASS)));
+
+        public static final RegistryObject<Block> BANANA_BLOCK = registerBlock("banana_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                .mapColor(MapColor.COLOR_YELLOW)
+                .strength(1.0F)
+                .sound(SoundType.GRASS)));
+
+        public static final RegistryObject<Block> NOUGAT_BLOCK = registerBlock("nougat_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                .mapColor(MapColor.COLOR_LIGHT_GRAY)
+                .strength(2.0F, 5.0F)
+                .sound(SoundType.STONE)));
+
     private ModBlocks() {
     }
 
