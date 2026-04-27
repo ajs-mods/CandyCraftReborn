@@ -56,6 +56,43 @@ public final class ModItems {
     public static final RegistryObject<SugarPillItem> SUGAR_PILL = ITEMS.register("sugar_pill",
         () -> new SugarPillItem(new Item.Properties().stacksTo(16)));
 
+    // ── Batch 2 items ────────────────────────────────────────────────────────
+    public static final RegistryObject<Item> DRAGIBUS = ITEMS.register("dragibus",
+        () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(3).saturationMod(0.4F).alwaysEat().build())));
+
+    public static final RegistryObject<Item> WAFFLE = ITEMS.register("waffle",
+        () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(8).saturationMod(0.8F).build())));
+
+    public static final RegistryObject<Item> WAFFLE_NUGGET = ITEMS.register("waffle_nugget",
+        () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(2).saturationMod(0.3F).build())));
+
+    public static final RegistryObject<Item> CARAMEL_BUCKET = ITEMS.register("caramel_bucket",
+        () -> new Item(new Item.Properties().stacksTo(1)));
+
+    public static final RegistryObject<Item> PEZ = ITEMS.register("pez",
+        () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> PEZ_DUST = ITEMS.register("pez_dust",
+        () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> NOUGAT_POWDER = ITEMS.register("nougat_powder",
+        () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> MARSHMALLOW_STICK = ITEMS.register("marshmallow_stick",
+        () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> CRANBERRY_FISH = ITEMS.register("cranberry_fish",
+        () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(2).saturationMod(0.1F).build())));
+
+    public static final RegistryObject<Item> CRANBERRY_FISH_COOKED = ITEMS.register("cranberry_fish_cooked",
+        () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(7).saturationMod(0.8F).build())));
+
+    public static final RegistryObject<Item> CANDIED_CHERRY = ITEMS.register("candied_cherry",
+        () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(3).saturationMod(0.5F).alwaysEat().build())));
+
+    public static final RegistryObject<Item> GUMMY_BALL = ITEMS.register("gummy_ball",
+        () -> new Item(new Item.Properties().stacksTo(16)));
+
     public static final RegistryObject<Item> CANDY_CRITTER_SPAWN_EGG = ITEMS.register("candy_critter_spawn_egg",
         () -> new ForgeSpawnEggItem(ModEntities.CANDY_CRITTER, 0xB26BFF, 0xFFF6BD, new Item.Properties()));
 

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:block",
+  "pools": [{
+    "rolls": 1,
+    "entries": [{ "type": "minecraft:item", "name": "candycraftreborn:honey_block_cc" }],
+    "conditions": [{ "condition": "minecraft:survives_explosion" }]
+  }]
+}

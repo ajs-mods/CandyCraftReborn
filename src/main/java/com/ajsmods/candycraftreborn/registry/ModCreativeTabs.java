@@ -19,6 +19,7 @@ public final class ModCreativeTabs {
                     .withTabsBefore(CreativeModeTabs.SPAWN_EGGS)
                     .icon(() -> ModItems.PEPPERMINT.get().getDefaultInstance())
                     .displayItems((parameters, output) -> {
+                        // Foods & ingredients
                         output.accept(ModItems.PEPPERMINT.get());
                         output.accept(ModItems.CARAMEL_SHARD.get());
                         output.accept(ModItems.SOUR_GEM.get());
@@ -33,6 +34,20 @@ public final class ModCreativeTabs {
                         output.accept(ModItems.CHOCOLATE_COIN.get());
                         output.accept(ModItems.SUGAR_CRYSTAL.get());
                         output.accept(ModItems.SUGAR_PILL.get());
+                        output.accept(ModItems.DRAGIBUS.get());
+                        output.accept(ModItems.WAFFLE.get());
+                        output.accept(ModItems.WAFFLE_NUGGET.get());
+                        output.accept(ModItems.CANDIED_CHERRY.get());
+                        output.accept(ModItems.CRANBERRY_FISH.get());
+                        output.accept(ModItems.CRANBERRY_FISH_COOKED.get());
+                        // Materials
+                        output.accept(ModItems.CARAMEL_BUCKET.get());
+                        output.accept(ModItems.PEZ.get());
+                        output.accept(ModItems.PEZ_DUST.get());
+                        output.accept(ModItems.NOUGAT_POWDER.get());
+                        output.accept(ModItems.MARSHMALLOW_STICK.get());
+                        output.accept(ModItems.GUMMY_BALL.get());
+                        // Building blocks
                         output.accept(ModBlocks.ROCK_CANDY_BLOCK.get());
                         output.accept(ModBlocks.MARSHMALLOW_BLOCK.get());
                         output.accept(ModBlocks.GUMMY_BLOCK.get());
@@ -46,7 +61,25 @@ public final class ModCreativeTabs {
                         output.accept(ModBlocks.RASPBERRY_BLOCK.get());
                         output.accept(ModBlocks.BANANA_BLOCK.get());
                         output.accept(ModBlocks.NOUGAT_BLOCK.get());
+                        output.accept(ModBlocks.PUDDING.get());
+                        output.accept(ModBlocks.FLOUR.get());
+                        output.accept(ModBlocks.MARSHMALLOW_LOG.get());
+                        output.accept(ModBlocks.LICORICE_BRICK.get());
+                        output.accept(ModBlocks.CHOCOLATE_COBBLESTONE.get());
+                        output.accept(ModBlocks.PEZ_BLOCK.get());
+                        output.accept(ModBlocks.HONEY_BLOCK_CC.get());
+                        output.accept(ModBlocks.CARAMEL_BRICK.get());
+                        output.accept(ModBlocks.CHEWING_GUM_BLOCK.get());
+                        output.accept(ModBlocks.TRAMPOJELLY.get());
+                        // Ores
+                        output.accept(ModBlocks.LICORICE_ORE.get());
+                        output.accept(ModBlocks.JELLY_ORE.get());
+                        output.accept(ModBlocks.HONEY_ORE.get());
+                        output.accept(ModBlocks.NOUGAT_ORE.get());
+                        output.accept(ModBlocks.PEZ_ORE.get());
+                        // Machines
                         output.accept(ModBlocks.ALCHEMY_TABLE.get());
+                        // Entities
                         output.accept(ModItems.CANDY_CRITTER_SPAWN_EGG.get());
                     })
                     .build());

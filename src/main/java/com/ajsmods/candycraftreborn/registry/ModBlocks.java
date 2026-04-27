@@ -97,11 +97,109 @@ public final class ModBlocks {
                 .strength(2.0F, 5.0F)
                 .sound(SoundType.STONE)));
 
-            public static final RegistryObject<Block> ALCHEMY_TABLE = registerBlock("alchemy_table",
-                () -> new AlchemyTableBlock(BlockBehaviour.Properties.of()
+    public static final RegistryObject<Block> ALCHEMY_TABLE = registerBlock("alchemy_table",
+            () -> new AlchemyTableBlock(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_BROWN)
                     .strength(2.5F, 6.0F)
                     .sound(SoundType.METAL)));
+
+    // ── Ores ─────────────────────────────────────────────────────────────────
+    public static final RegistryObject<Block> LICORICE_ORE = registerBlock("licorice_ore",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_BLACK)
+                    .strength(3.0F, 5.0F)
+                    .sound(SoundType.STONE)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> JELLY_ORE = registerBlock("jelly_ore",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_RED)
+                    .strength(3.0F, 5.0F)
+                    .sound(SoundType.STONE)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> HONEY_ORE = registerBlock("honey_ore",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_YELLOW)
+                    .strength(3.0F, 5.0F)
+                    .sound(SoundType.STONE)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> NOUGAT_ORE = registerBlock("nougat_ore",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_LIGHT_GRAY)
+                    .strength(3.0F, 5.0F)
+                    .sound(SoundType.STONE)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> PEZ_ORE = registerBlock("pez_ore",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.DIAMOND)
+                    .strength(3.5F, 5.0F)
+                    .sound(SoundType.STONE)
+                    .requiresCorrectToolForDrops()));
+
+    // ── Nature ───────────────────────────────────────────────────────────────
+    public static final RegistryObject<Block> PUDDING = registerBlock("pudding",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.TERRACOTTA_YELLOW)
+                    .strength(0.6F)
+                    .sound(SoundType.WOOL)));
+
+    public static final RegistryObject<Block> FLOUR = registerBlock("flour",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.SAND)
+                    .strength(0.6F)
+                    .sound(SoundType.SAND)));
+
+    public static final RegistryObject<Block> MARSHMALLOW_LOG = registerBlock("marshmallow_log",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_PINK)
+                    .strength(2.0F)
+                    .sound(SoundType.WOOD)));
+
+    // ── Decorative ───────────────────────────────────────────────────────────
+    public static final RegistryObject<Block> LICORICE_BRICK = registerBlock("licorice_brick",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_BLACK)
+                    .strength(3.0F, 5.0F)
+                    .sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> CHOCOLATE_COBBLESTONE = registerBlock("chocolate_cobblestone",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_BROWN)
+                    .strength(2.0F, 6.0F)
+                    .sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> PEZ_BLOCK = registerBlock("pez_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.DIAMOND)
+                    .strength(5.0F, 6.0F)
+                    .sound(SoundType.METAL)));
+
+    public static final RegistryObject<Block> HONEY_BLOCK_CC = registerBlock("honey_block_cc",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_YELLOW)
+                    .strength(2.5F)
+                    .sound(SoundType.HONEY_BLOCK)));
+
+    public static final RegistryObject<Block> CARAMEL_BRICK = registerBlock("caramel_brick",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_ORANGE)
+                    .strength(2.5F, 4.0F)
+                    .sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> CHEWING_GUM_BLOCK = registerBlock("chewing_gum_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_PINK)
+                    .strength(1.5F)
+                    .sound(SoundType.SLIME_BLOCK)));
+
+    public static final RegistryObject<Block> TRAMPOJELLY = registerBlock("trampojelly",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_GREEN)
+                    .strength(3.0F, 2000.0F)
+                    .sound(SoundType.SLIME_BLOCK)));
 
     private ModBlocks() {
     }
