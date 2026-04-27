@@ -48,6 +48,10 @@ This matrix maps core legacy systems from CandyCraft 1.12.2 to their CandyCraftR
 - Implemented representative legacy migration batch:
   - 10 blocks: licorice_block, candy_cane_block, caramel_block, sugar_block, chocolate_stone, cotton_candy_block, mint_block, raspberry_block, banana_block, nougat_block
   - 10 items: licorice, candy_cane, lollipop, gummy, hot_gummy, cotton_candy, honey_shard, honeycomb, chocolate_coin, sugar_crystal
+- Implemented machine UI baseline:
+  - 1 block entity machine: alchemy_table
+  - 1 menu: alchemy_table
+  - 1 screen: alchemy_table
 - Added baseline data assets:
   - lang, blockstates, models, recipes, block loot tables
 - Verified compile success with prepareRunClientCompile

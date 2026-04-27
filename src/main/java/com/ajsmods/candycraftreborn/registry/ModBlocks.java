@@ -1,6 +1,7 @@
 package com.ajsmods.candycraftreborn.registry;
 
 import com.ajsmods.candycraftreborn.CandyCraftMod;
+import com.ajsmods.candycraftreborn.block.AlchemyTableBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -95,6 +96,12 @@ public final class ModBlocks {
                 .mapColor(MapColor.COLOR_LIGHT_GRAY)
                 .strength(2.0F, 5.0F)
                 .sound(SoundType.STONE)));
+
+            public static final RegistryObject<Block> ALCHEMY_TABLE = registerBlock("alchemy_table",
+                () -> new AlchemyTableBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_BROWN)
+                    .strength(2.5F, 6.0F)
+                    .sound(SoundType.METAL)));
 
     private ModBlocks() {
     }

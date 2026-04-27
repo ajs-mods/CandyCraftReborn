@@ -1,11 +1,15 @@
 package com.ajsmods.candycraftreborn;
 
+import com.ajsmods.candycraftreborn.client.screen.AlchemyTableScreen;
+import com.ajsmods.candycraftreborn.registry.ModBlockEntities;
 import com.ajsmods.candycraftreborn.registry.ModBlocks;
 import com.ajsmods.candycraftreborn.registry.ModCreativeTabs;
 import com.ajsmods.candycraftreborn.registry.ModEntities;
 import com.ajsmods.candycraftreborn.registry.ModItems;
+import com.ajsmods.candycraftreborn.registry.ModMenus;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.entity.CowRenderer;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
@@ -37,8 +41,10 @@ public class CandyCraftMod
         modEventBus.addListener(ModEntities::registerAttributes);
 
         ModBlocks.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
         ModItems.register(modEventBus);
         ModEntities.register(modEventBus);
+        ModMenus.register(modEventBus);
         ModCreativeTabs.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -78,6 +84,7 @@ public class CandyCraftMod
         public static void onClientSetup(FMLClientSetupEvent event)
         {
             LOGGER.info("Client setup for {}", MODID);
+            event.enqueueWork(() -> MenuScreens.register(ModMenus.ALCHEMY_TABLE_MENU.get(), AlchemyTableScreen::new));
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
         }
     }

@@ -45,6 +45,7 @@ public final class ModCreativeTabs {
                         output.accept(ModBlocks.RASPBERRY_BLOCK.get());
                         output.accept(ModBlocks.BANANA_BLOCK.get());
                         output.accept(ModBlocks.NOUGAT_BLOCK.get());
+                        output.accept(ModBlocks.ALCHEMY_TABLE.get());
                         output.accept(ModItems.CANDY_CRITTER_SPAWN_EGG.get());
                     })
                     .build());
