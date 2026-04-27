@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "candycraftreborn:block/marshmallow_ladder" },
+    "facing=south": { "model": "candycraftreborn:block/marshmallow_ladder", "y": 180 },
+    "facing=east": { "model": "candycraftreborn:block/marshmallow_ladder", "y": 90 },
+    "facing=west": { "model": "candycraftreborn:block/marshmallow_ladder", "y": 270 }
+  }
+}

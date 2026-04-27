@@ -1,6 +1,1 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "minecraft:block/yellow_wool"
-  }
-}
+{"parent":"minecraft:block/cube_all","textures":{"all":"candycraftreborn:block/banana_block"}}

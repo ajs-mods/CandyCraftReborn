@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "candycraftreborn:block/ice_cream.2",
+    "top": "candycraftreborn:block/ice_cream.2",
+    "side": "candycraftreborn:block/ice_cream.2"
+  }
+}

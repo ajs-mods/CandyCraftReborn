@@ -1,6 +1,1 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "block/stone"
-  }
-}
+{"parent":"minecraft:block/cube_column","textures":{"end":"candycraftreborn:block/marshmallow_log_top.0","side":"candycraftreborn:block/marshmallow_log_side.0"}}

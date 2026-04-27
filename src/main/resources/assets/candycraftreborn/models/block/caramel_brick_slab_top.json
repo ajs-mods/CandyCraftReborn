@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "candycraftreborn:block/caramel_brick",
+    "top": "candycraftreborn:block/caramel_brick",
+    "side": "candycraftreborn:block/caramel_brick"
+  }
+}

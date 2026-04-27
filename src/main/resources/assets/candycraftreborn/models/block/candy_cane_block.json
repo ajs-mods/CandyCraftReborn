@@ -1,7 +1,1 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "minecraft:block/quartz_block_top",
-    "side": "minecraft:block/red_wool"
-  }
-}
+{"parent":"minecraft:block/cube_column","textures":{"end":"candycraftreborn:block/candy_cane_top","side":"candycraftreborn:block/candy_cane_side"}}

@@ -1,6 +1,1 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "minecraft:block/honeycomb_block"
-  }
-}
+{"parent":"minecraft:block/cube_all","textures":{"all":"candycraftreborn:block/caramel_block"}}

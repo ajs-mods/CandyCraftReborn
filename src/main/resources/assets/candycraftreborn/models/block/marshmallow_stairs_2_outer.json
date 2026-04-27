@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "candycraftreborn:block/marshmallow_planks.2",
+    "top": "candycraftreborn:block/marshmallow_planks.2",
+    "side": "candycraftreborn:block/marshmallow_planks.2"
+  }
+}

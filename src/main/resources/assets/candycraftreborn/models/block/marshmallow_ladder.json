@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/ladder",
+  "textures": {
+    "texture": "candycraftreborn:block/marshmallow_ladder"
+  }
+}

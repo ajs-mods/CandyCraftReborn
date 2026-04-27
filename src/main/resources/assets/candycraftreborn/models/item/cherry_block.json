@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "candycraftreborn:block/cherry_block"
+  }
+}

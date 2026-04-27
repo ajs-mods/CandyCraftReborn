@@ -1,4 +1,1 @@
-{
-  "parent": "block/cube_all",
-  "textures": { "all": "block/stone" }
-}
+{"parent":"minecraft:block/stairs","textures":{"bottom":"candycraftreborn:block/chocolate_stone","top":"candycraftreborn:block/chocolate_stone","side":"candycraftreborn:block/chocolate_stone"}}

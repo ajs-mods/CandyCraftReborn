@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_inventory",
+  "textures": {
+    "texture": "candycraftreborn:block/marshmallow_planks.0"
+  }
+}

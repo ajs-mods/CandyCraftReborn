@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "candycraftreborn:block/marshmallow_planks.1",
+    "top": "candycraftreborn:block/marshmallow_planks.1",
+    "side": "candycraftreborn:block/marshmallow_planks.1"
+  }
+}

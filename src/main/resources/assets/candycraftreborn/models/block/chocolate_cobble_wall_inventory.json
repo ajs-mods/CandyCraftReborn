@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "candycraftreborn:block/chocolate_cobblestone"
+  }
+}
