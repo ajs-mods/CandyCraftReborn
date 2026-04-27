@@ -2,13 +2,24 @@ package com.ajsmods.candycraftreborn.registry;
 
 import com.ajsmods.candycraftreborn.CandyCraftMod;
 import com.ajsmods.candycraftreborn.block.AlchemyTableBlock;
+import com.ajsmods.candycraftreborn.block.CandyEggBlock;
 import com.ajsmods.candycraftreborn.block.CandyPortalBlock;
+import com.ajsmods.candycraftreborn.block.DragribusCropBlock;
+import com.ajsmods.candycraftreborn.block.LicoriceFurnaceBlock;
+import com.ajsmods.candycraftreborn.block.MarshmallowChestBlock;
 import com.ajsmods.candycraftreborn.block.SugarBlock;
+import com.ajsmods.candycraftreborn.block.SugarFactoryBlock;
+import com.ajsmods.candycraftreborn.block.TeleporterBlock;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.BedBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.CraftingTableBlock;
 import net.minecraft.world.level.block.DoorBlock;
+import net.minecraft.world.level.block.FarmBlock;
+import net.minecraft.world.level.block.JukeboxBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.SoundType;
@@ -629,6 +640,70 @@ public final class ModBlocks {
                     .strength(-1.0F)
                     .sound(SoundType.GLASS)
                     .lightLevel(state -> 11)));
+
+    // ── New Blocks (Batch 3) ────────────────────────────────────────────────
+
+    // Group 1: Simple vanilla-extending blocks
+    public static final RegistryObject<Block> MARSHMALLOW_WORKBENCH = registerBlock("marshmallow_workbench",
+            () -> new CraftingTableBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.SNOW).strength(2.5F).sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> COTTON_CANDY_JUKEBOX = registerBlock("cotton_candy_jukebox",
+            () -> new JukeboxBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_PINK).strength(2.0F, 6.0F).sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> CANDY_FARMLAND = registerBlock("candy_farmland",
+            () -> new FarmBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.DIRT).strength(0.6F).sound(SoundType.GRAVEL)));
+
+    // Group 2: Custom blocks
+    public static final RegistryObject<Block> LICORICE_FURNACE = registerBlock("licorice_furnace",
+            () -> new LicoriceFurnaceBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_BLACK).strength(3.5F).sound(SoundType.STONE)
+                    .lightLevel(state -> state.getValue(LicoriceFurnaceBlock.LIT) ? 13 : 0)));
+
+    public static final RegistryObject<Block> MARSHMALLOW_CHEST = registerBlock("marshmallow_chest",
+            () -> new MarshmallowChestBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.SNOW).strength(2.5F).sound(SoundType.WOOD)));
+
+    // Bed — registered WITHOUT BlockItem (bed item is special)
+    public static final RegistryObject<Block> COTTON_CANDY_BED = BLOCKS.register("cotton_candy_bed",
+            () -> new BedBlock(DyeColor.PINK, BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_PINK).strength(0.2F).sound(SoundType.WOOD).noOcclusion()));
+
+    public static final RegistryObject<Block> SUGAR_FACTORY = registerBlock("sugar_factory",
+            () -> new SugarFactoryBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.SNOW).strength(3.5F).sound(SoundType.STONE)
+                    .lightLevel(state -> state.getValue(SugarFactoryBlock.LIT) ? 13 : 0), false));
+
+    public static final RegistryObject<Block> ADVANCED_SUGAR_FACTORY = registerBlock("advanced_sugar_factory",
+            () -> new SugarFactoryBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.SNOW).strength(3.5F).sound(SoundType.STONE)
+                    .lightLevel(state -> state.getValue(SugarFactoryBlock.LIT) ? 13 : 0), true));
+
+    public static final RegistryObject<Block> TELEPORTER_BLOCK = registerBlock("teleporter_block",
+            () -> new TeleporterBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_PURPLE).strength(2.0F).sound(SoundType.STONE).noOcclusion()));
+
+    public static final RegistryObject<Block> DRAGON_EGG_BLOCK = registerBlock("dragon_egg_block",
+            () -> new CandyEggBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_RED).strength(3.0F, 9.0F).sound(SoundType.STONE)
+                    .lightLevel(s -> 1).noOcclusion()));
+
+    public static final RegistryObject<Block> BEETLE_EGG_BLOCK = registerBlock("beetle_egg_block",
+            () -> new CandyEggBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_BROWN).strength(3.0F, 9.0F).sound(SoundType.STONE)
+                    .lightLevel(s -> 1).noOcclusion()));
+
+    // Crop — registered WITHOUT BlockItem (seeds handle placement)
+    public static final RegistryObject<Block> DRAGIBUS_CROPS = BLOCKS.register("dragibus_crops",
+            () -> new DragribusCropBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.CROP)));
+
+    // Grenadine liquid placeholder (full fluid system TBD)
+    public static final RegistryObject<Block> GRENADINE_LIQUID = BLOCKS.register("grenadine_liquid",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_RED).noCollission().strength(100.0F).noLootTable()));
 
     private ModBlocks() {
     }

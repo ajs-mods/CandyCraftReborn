@@ -1,0 +1,1 @@
+{"type":"minecraft:block","pools":[{"rolls":1,"entries":[{"type":"minecraft:item","name":"candycraftreborn:cotton_candy_jukebox"}],"conditions":[{"condition":"minecraft:survives_explosion"}]}]}

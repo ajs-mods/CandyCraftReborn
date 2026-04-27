@@ -1,0 +1,1 @@
+{"type":"minecraft:block","pools":[{"rolls":1,"entries":[{"type":"minecraft:item","name":"candycraftreborn:marshmallow_chest"}],"conditions":[{"condition":"minecraft:survives_explosion"}]}]}

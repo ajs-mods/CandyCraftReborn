@@ -263,5 +263,21 @@
   "advancement.candycraftreborn.get_pez": "Top Tier Sweets",
   "advancement.candycraftreborn.get_pez.description": "Obtain PEZ",
   "advancement.candycraftreborn.full_pez_armor": "Sugar Knight",
-  "advancement.candycraftreborn.full_pez_armor.description": "Wear a full set of PEZ armor"
+  "advancement.candycraftreborn.full_pez_armor.description": "Wear a full set of PEZ armor",
+  "block.candycraftreborn.marshmallow_workbench": "Marshmallow Workbench",
+  "block.candycraftreborn.cotton_candy_jukebox": "Cotton Candy Jukebox",
+  "block.candycraftreborn.candy_farmland": "Candy Farmland",
+  "block.candycraftreborn.licorice_furnace": "Licorice Furnace",
+  "block.candycraftreborn.marshmallow_chest": "Marshmallow Chest",
+  "block.candycraftreborn.cotton_candy_bed": "Cotton Candy Bed",
+  "block.candycraftreborn.sugar_factory": "Sugar Factory",
+  "block.candycraftreborn.advanced_sugar_factory": "Advanced Sugar Factory",
+  "block.candycraftreborn.teleporter_block": "Teleporter",
+  "block.candycraftreborn.dragon_egg_block": "Dragon Egg",
+  "block.candycraftreborn.beetle_egg_block": "Beetle Egg",
+  "block.candycraftreborn.dragibus_crops": "Dragibus Crops",
+  "block.candycraftreborn.grenadine_liquid": "Grenadine",
+  "container.candycraftreborn.licorice_furnace": "Licorice Furnace",
+  "container.candycraftreborn.marshmallow_chest": "Marshmallow Chest",
+  "container.candycraftreborn.sugar_factory": "Sugar Factory"
 }
