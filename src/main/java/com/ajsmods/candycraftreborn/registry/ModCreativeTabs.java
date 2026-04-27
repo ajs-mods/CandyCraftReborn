@@ -32,6 +32,7 @@ public final class ModCreativeTabs {
                         output.accept(ModItems.HONEYCOMB.get());
                         output.accept(ModItems.CHOCOLATE_COIN.get());
                         output.accept(ModItems.SUGAR_CRYSTAL.get());
+                        output.accept(ModItems.SUGAR_PILL.get());
                         output.accept(ModBlocks.ROCK_CANDY_BLOCK.get());
                         output.accept(ModBlocks.MARSHMALLOW_BLOCK.get());
                         output.accept(ModBlocks.GUMMY_BLOCK.get());

@@ -27,8 +27,9 @@
   "item.candycraftreborn.honeycomb": "Honeycomb",
   "item.candycraftreborn.chocolate_coin": "Chocolate Coin",
   "item.candycraftreborn.sugar_crystal": "Sugar Crystal",
+  "item.candycraftreborn.sugar_pill": "Sugar Pill",
   "item.candycraftreborn.candy_critter_spawn_egg": "Candy Critter Spawn Egg",
   "entity.candycraftreborn.candy_critter": "Candy Critter",
   "menu.candycraftreborn.alchemy_table": "Alchemy Table",
-  "menu.candycraftreborn.alchemy_table.hint": "Prototype machine UI"
+  "menu.candycraftreborn.alchemy_table.hint": "Fill 4 slots with candy items"
 }
