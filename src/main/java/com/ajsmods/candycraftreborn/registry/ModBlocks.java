@@ -5,8 +5,13 @@ import com.ajsmods.candycraftreborn.block.AlchemyTableBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.DoorBlock;
+import net.minecraft.world.level.block.SlabBlock;
+import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -200,6 +205,119 @@ public final class ModBlocks {
                     .mapColor(MapColor.COLOR_GREEN)
                     .strength(3.0F, 2000.0F)
                     .sound(SoundType.SLIME_BLOCK)));
+
+    // ── Decorative stairs & slabs ───────────────────────────────────────────
+    public static final RegistryObject<Block> MARSHMALLOW_STAIRS = registerBlock("marshmallow_stairs",
+            () -> new StairBlock(MARSHMALLOW_BLOCK.get()::defaultBlockState,
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.SNOW)
+                            .strength(0.6F)
+                            .sound(SoundType.WOOL)));
+
+    public static final RegistryObject<Block> MARSHMALLOW_SLAB = registerBlock("marshmallow_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.SNOW)
+                    .strength(0.6F)
+                    .sound(SoundType.WOOL)));
+
+    public static final RegistryObject<Block> CANDY_CANE_STAIRS = registerBlock("candy_cane_stairs",
+            () -> new StairBlock(CANDY_CANE_BLOCK.get()::defaultBlockState,
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.COLOR_RED)
+                            .strength(1.2F)
+                            .sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> CANDY_CANE_SLAB = registerBlock("candy_cane_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_RED)
+                    .strength(1.2F)
+                    .sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> LICORICE_BRICK_STAIRS = registerBlock("licorice_brick_stairs",
+            () -> new StairBlock(LICORICE_BRICK.get()::defaultBlockState,
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.COLOR_BLACK)
+                            .strength(3.0F, 5.0F)
+                            .sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> LICORICE_BRICK_SLAB = registerBlock("licorice_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_BLACK)
+                    .strength(3.0F, 5.0F)
+                    .sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> CHOCOLATE_STONE_STAIRS = registerBlock("chocolate_stone_stairs",
+            () -> new StairBlock(CHOCOLATE_STONE.get()::defaultBlockState,
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.COLOR_BROWN)
+                            .strength(1.8F, 6.0F)
+                            .sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> CHOCOLATE_STONE_SLAB = registerBlock("chocolate_stone_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_BROWN)
+                    .strength(1.8F, 6.0F)
+                    .sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> CARAMEL_STAIRS = registerBlock("caramel_stairs",
+            () -> new StairBlock(CARAMEL_BLOCK.get()::defaultBlockState,
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.COLOR_ORANGE)
+                            .strength(2.0F, 4.0F)
+                            .sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> CARAMEL_SLAB = registerBlock("caramel_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_ORANGE)
+                    .strength(2.0F, 4.0F)
+                    .sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> COTTON_CANDY_STAIRS = registerBlock("cotton_candy_stairs",
+            () -> new StairBlock(COTTON_CANDY_BLOCK.get()::defaultBlockState,
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.COLOR_PINK)
+                            .strength(0.3F)
+                            .sound(SoundType.WOOL)));
+
+    public static final RegistryObject<Block> COTTON_CANDY_SLAB = registerBlock("cotton_candy_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_PINK)
+                    .strength(0.3F)
+                    .sound(SoundType.WOOL)));
+
+    // ── Doors ───────────────────────────────────────────────────────────────
+    public static final RegistryObject<Block> MARSHMALLOW_DOOR = registerBlock("marshmallow_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.SNOW)
+                    .strength(3.0F)
+                    .sound(SoundType.WOOD)
+                    .noOcclusion(),
+                    BlockSetType.OAK));
+
+    // ── Ice Cream blocks ────────────────────────────────────────────────────
+    public static final RegistryObject<Block> ICE_CREAM_VANILLA = registerBlock("ice_cream_vanilla",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.TERRACOTTA_WHITE)
+                    .strength(0.4F)
+                    .sound(SoundType.WOOL)));
+
+    public static final RegistryObject<Block> ICE_CREAM_STRAWBERRY = registerBlock("ice_cream_strawberry",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_RED)
+                    .strength(0.4F)
+                    .sound(SoundType.WOOL)));
+
+    public static final RegistryObject<Block> ICE_CREAM_CHOCOLATE = registerBlock("ice_cream_chocolate",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_BROWN)
+                    .strength(0.4F)
+                    .sound(SoundType.WOOL)));
+
+    public static final RegistryObject<Block> ICE_CREAM_MINT = registerBlock("ice_cream_mint",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_LIGHT_GREEN)
+                    .strength(0.4F)
+                    .sound(SoundType.WOOL)));
 
     private ModBlocks() {
     }

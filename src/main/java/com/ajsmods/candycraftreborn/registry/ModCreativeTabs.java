@@ -77,6 +77,26 @@ public final class ModCreativeTabs {
                         output.accept(ModBlocks.HONEY_ORE.get());
                         output.accept(ModBlocks.NOUGAT_ORE.get());
                         output.accept(ModBlocks.PEZ_ORE.get());
+                        // Decorative stairs & slabs
+                        output.accept(ModBlocks.MARSHMALLOW_STAIRS.get());
+                        output.accept(ModBlocks.MARSHMALLOW_SLAB.get());
+                        output.accept(ModBlocks.CANDY_CANE_STAIRS.get());
+                        output.accept(ModBlocks.CANDY_CANE_SLAB.get());
+                        output.accept(ModBlocks.LICORICE_BRICK_STAIRS.get());
+                        output.accept(ModBlocks.LICORICE_BRICK_SLAB.get());
+                        output.accept(ModBlocks.CHOCOLATE_STONE_STAIRS.get());
+                        output.accept(ModBlocks.CHOCOLATE_STONE_SLAB.get());
+                        output.accept(ModBlocks.CARAMEL_STAIRS.get());
+                        output.accept(ModBlocks.CARAMEL_SLAB.get());
+                        output.accept(ModBlocks.COTTON_CANDY_STAIRS.get());
+                        output.accept(ModBlocks.COTTON_CANDY_SLAB.get());
+                        // Doors & specialty
+                        output.accept(ModBlocks.MARSHMALLOW_DOOR.get());
+                        // Ice Cream
+                        output.accept(ModBlocks.ICE_CREAM_VANILLA.get());
+                        output.accept(ModBlocks.ICE_CREAM_STRAWBERRY.get());
+                        output.accept(ModBlocks.ICE_CREAM_CHOCOLATE.get());
+                        output.accept(ModBlocks.ICE_CREAM_MINT.get());
                         // Machines
                         output.accept(ModBlocks.ALCHEMY_TABLE.get());
                         // Entities

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:block",
+  "pools": [{
+    "rolls": 1,
+    "entries": [{ "type": "minecraft:item", "name": "candycraftreborn:ice_cream_strawberry" }],
+    "conditions": [{ "condition": "minecraft:survives_explosion" }]
+  }]
+}
