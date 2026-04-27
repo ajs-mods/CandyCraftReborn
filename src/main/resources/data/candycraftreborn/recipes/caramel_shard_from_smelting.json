@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "ingredient": {
+    "item": "minecraft:sugar"
+  },
+  "result": "candycraftreborn:caramel_shard",
+  "experience": 0.15,
+  "cookingtime": 100
+}

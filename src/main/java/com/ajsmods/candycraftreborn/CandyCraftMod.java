@@ -1,13 +1,17 @@
 package com.ajsmods.candycraftreborn;
 
 import com.ajsmods.candycraftreborn.registry.ModBlocks;
+import com.ajsmods.candycraftreborn.registry.ModCreativeTabs;
+import com.ajsmods.candycraftreborn.registry.ModEntities;
 import com.ajsmods.candycraftreborn.registry.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.entity.CowRenderer;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.server.ServerStartingEvent;
+import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -30,9 +34,12 @@ public class CandyCraftMod
         IEventBus modEventBus = context.getModEventBus();
 
         modEventBus.addListener(this::commonSetup);
+        modEventBus.addListener(ModEntities::registerAttributes);
 
         ModBlocks.register(modEventBus);
         ModItems.register(modEventBus);
+        ModEntities.register(modEventBus);
+        ModCreativeTabs.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
 
@@ -62,6 +69,11 @@ public class CandyCraftMod
     @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents
     {
+        @SubscribeEvent
+        public static void onRegisterRenderers(EntityRenderersEvent.RegisterRenderers event) {
+            event.registerEntityRenderer(ModEntities.CANDY_CRITTER.get(), CowRenderer::new);
+        }
+
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
