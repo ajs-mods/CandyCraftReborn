@@ -10,6 +10,7 @@ import com.ajsmods.candycraftreborn.registry.ModEntities;
 import com.ajsmods.candycraftreborn.registry.ModItems;
 import com.ajsmods.candycraftreborn.registry.ModMenus;
 import com.ajsmods.candycraftreborn.registry.ModSounds;
+import com.ajsmods.candycraftreborn.registry.ModStructures;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.MenuScreens;
@@ -49,6 +50,7 @@ public class CandyCraftMod
         ModMenus.register(modEventBus);
         ModCreativeTabs.register(modEventBus);
         ModSounds.register(modEventBus);
+        ModStructures.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
 
