@@ -2,6 +2,7 @@ package com.ajsmods.candycraftreborn.registry;
 
 import com.ajsmods.candycraftreborn.CandyCraftMod;
 import com.ajsmods.candycraftreborn.entity.*;
+import com.ajsmods.candycraftreborn.entity.boss.*;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
@@ -108,6 +109,27 @@ public final class ModEntities {
             () -> EntityType.Builder.of(KingBeetleEntity::new, MobCategory.CREATURE)
                     .sized(3.0F, 2.0F).build(CandyCraftMod.MODID + ":king_beetle"));
 
+    // ── Bosses ────────────────────────────────────────────────────────────────
+    public static final RegistryObject<EntityType<JellyQueenEntity>> JELLY_QUEEN = ENTITIES.register("jelly_queen",
+            () -> EntityType.Builder.of(JellyQueenEntity::new, MobCategory.MONSTER)
+                    .sized(1.8F, 2.4F).fireImmune().build(CandyCraftMod.MODID + ":jelly_queen"));
+
+    public static final RegistryObject<EntityType<PEZJellyEntity>> PEZ_JELLY = ENTITIES.register("pez_jelly",
+            () -> EntityType.Builder.of(PEZJellyEntity::new, MobCategory.MONSTER)
+                    .sized(1.0F, 1.0F).fireImmune().build(CandyCraftMod.MODID + ":pez_jelly"));
+
+    public static final RegistryObject<EntityType<KingSlimeEntity>> KING_SLIME = ENTITIES.register("king_slime",
+            () -> EntityType.Builder.of(KingSlimeEntity::new, MobCategory.MONSTER)
+                    .sized(2.0F, 2.0F).fireImmune().build(CandyCraftMod.MODID + ":king_slime"));
+
+    public static final RegistryObject<EntityType<BossSuguardEntity>> BOSS_SUGUARD = ENTITIES.register("boss_suguard",
+            () -> EntityType.Builder.of(BossSuguardEntity::new, MobCategory.MONSTER)
+                    .sized(0.6F, 1.8F).fireImmune().build(CandyCraftMod.MODID + ":boss_suguard"));
+
+    public static final RegistryObject<EntityType<BossBeetleEntity>> BOSS_BEETLE = ENTITIES.register("boss_beetle",
+            () -> EntityType.Builder.of(BossBeetleEntity::new, MobCategory.MONSTER)
+                    .sized(3.0F, 2.5F).fireImmune().build(CandyCraftMod.MODID + ":boss_beetle"));
+
     // ── Projectiles ──────────────────────────────────────────────────────────
     public static final RegistryObject<EntityType<CandyArrowEntity>> CANDY_ARROW = ENTITIES.register("candy_arrow",
             () -> EntityType.Builder.<CandyArrowEntity>of(CandyArrowEntity::new, MobCategory.MISC)
@@ -164,5 +186,11 @@ public final class ModEntities {
         event.put(NESSIE.get(), NessieEntity.createAttributes().build());
         event.put(DRAGON.get(), DragonEntity.createAttributes().build());
         event.put(KING_BEETLE.get(), KingBeetleEntity.createAttributes().build());
+        // Bosses
+        event.put(JELLY_QUEEN.get(), JellyQueenEntity.createAttributes().build());
+        event.put(PEZ_JELLY.get(), PEZJellyEntity.createAttributes().build());
+        event.put(KING_SLIME.get(), KingSlimeEntity.createAttributes().build());
+        event.put(BOSS_SUGUARD.get(), BossSuguardEntity.createAttributes().build());
+        event.put(BOSS_BEETLE.get(), BossBeetleEntity.createAttributes().build());
     }
 }

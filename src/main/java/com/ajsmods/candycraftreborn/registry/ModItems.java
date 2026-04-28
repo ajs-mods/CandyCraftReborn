@@ -145,6 +145,18 @@ public final class ModItems {
     public static final RegistryObject<Item> KING_BEETLE_SPAWN_EGG = ITEMS.register("king_beetle_spawn_egg",
         () -> new ForgeSpawnEggItem(ModEntities.KING_BEETLE, 0x556B2F, 0x2F4F4F, new Item.Properties()));
 
+    // ── Boss Spawn Eggs ──────────────────────────────────────────────────────
+    public static final RegistryObject<Item> JELLY_QUEEN_SPAWN_EGG = ITEMS.register("jelly_queen_spawn_egg",
+        () -> new ForgeSpawnEggItem(ModEntities.JELLY_QUEEN, 0x9932CC, 0x4B0082, new Item.Properties()));
+    public static final RegistryObject<Item> PEZ_JELLY_SPAWN_EGG = ITEMS.register("pez_jelly_spawn_egg",
+        () -> new ForgeSpawnEggItem(ModEntities.PEZ_JELLY, 0x00FF7F, 0x006400, new Item.Properties()));
+    public static final RegistryObject<Item> KING_SLIME_SPAWN_EGG = ITEMS.register("king_slime_spawn_egg",
+        () -> new ForgeSpawnEggItem(ModEntities.KING_SLIME, 0xFF0000, 0x8B0000, new Item.Properties()));
+    public static final RegistryObject<Item> BOSS_SUGUARD_SPAWN_EGG = ITEMS.register("boss_suguard_spawn_egg",
+        () -> new ForgeSpawnEggItem(ModEntities.BOSS_SUGUARD, 0xFFD700, 0xFFFFFF, new Item.Properties()));
+    public static final RegistryObject<Item> BOSS_BEETLE_SPAWN_EGG = ITEMS.register("boss_beetle_spawn_egg",
+        () -> new ForgeSpawnEggItem(ModEntities.BOSS_BEETLE, 0x800080, 0x4B0082, new Item.Properties()));
+
     // ── Marshmallow Tools ────────────────────────────────────────────────────
     public static final RegistryObject<Item> MARSHMALLOW_SWORD = ITEMS.register("marshmallow_sword",
         () -> new SwordItem(ModToolTiers.MARSHMALLOW, 3, -2.4F, new Item.Properties()));

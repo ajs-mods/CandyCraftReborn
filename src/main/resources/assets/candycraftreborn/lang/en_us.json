@@ -279,5 +279,15 @@
   "block.candycraftreborn.grenadine_liquid": "Grenadine",
   "container.candycraftreborn.licorice_furnace": "Licorice Furnace",
   "container.candycraftreborn.marshmallow_chest": "Marshmallow Chest",
-  "container.candycraftreborn.sugar_factory": "Sugar Factory"
+  "container.candycraftreborn.sugar_factory": "Sugar Factory",
+  "entity.candycraftreborn.jelly_queen": "Jelly Queen",
+  "entity.candycraftreborn.pez_jelly": "PEZ Jelly",
+  "entity.candycraftreborn.king_slime": "King Slime",
+  "entity.candycraftreborn.boss_suguard": "Boss Suguard",
+  "entity.candycraftreborn.boss_beetle": "Boss Beetle",
+  "item.candycraftreborn.jelly_queen_spawn_egg": "Jelly Queen Spawn Egg",
+  "item.candycraftreborn.pez_jelly_spawn_egg": "PEZ Jelly Spawn Egg",
+  "item.candycraftreborn.king_slime_spawn_egg": "King Slime Spawn Egg",
+  "item.candycraftreborn.boss_suguard_spawn_egg": "Boss Suguard Spawn Egg",
+  "item.candycraftreborn.boss_beetle_spawn_egg": "Boss Beetle Spawn Egg"
 }

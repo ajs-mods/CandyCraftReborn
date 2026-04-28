@@ -117,6 +117,17 @@ public class CandyCraftMod
             event.registerEntityRenderer(ModEntities.TORNADO_JELLY.get(),
                     ctx -> new JellyRenderer<>(ctx, new ResourceLocation(MODID, "textures/entity/tornado_jelly.png")));
 
+            // Boss mobs
+            event.registerEntityRenderer(ModEntities.JELLY_QUEEN.get(),
+                    ctx -> new JellyRenderer<>(ctx, new ResourceLocation(MODID, "textures/entity/jelly_queen.png")));
+            event.registerEntityRenderer(ModEntities.PEZ_JELLY.get(),
+                    ctx -> new JellyRenderer<>(ctx, new ResourceLocation(MODID, "textures/entity/pez_jelly.png")));
+            event.registerEntityRenderer(ModEntities.KING_SLIME.get(),
+                    ctx -> new JellyRenderer<>(ctx, new ResourceLocation(MODID, "textures/entity/king_slime.png")));
+            event.registerEntityRenderer(ModEntities.BOSS_SUGUARD.get(),
+                    (EntityRendererProvider) ctx -> new CandyHumanoidRenderer<>(ctx, new ResourceLocation(MODID, "textures/entity/boss_suguard.png")));
+            event.registerEntityRenderer(ModEntities.BOSS_BEETLE.get(), (EntityRendererProvider) BeetleRenderer::new);
+
             // Projectiles
             event.registerEntityRenderer(ModEntities.CANDY_ARROW.get(), (EntityRendererProvider) TippableArrowRenderer::new);
             event.registerEntityRenderer(ModEntities.DYNAMITE_ENTITY.get(), ThrownItemRenderer::new);
