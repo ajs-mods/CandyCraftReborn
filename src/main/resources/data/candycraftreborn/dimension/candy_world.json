@@ -112,6 +112,66 @@
             "depth": 0.0,
             "offset": 0.0
           }
+        },
+        {
+          "biome": "candycraftreborn:candy_river",
+          "parameters": {
+            "temperature": [ -1.0, 1.0 ],
+            "humidity": [ -1.0, 1.0 ],
+            "continentalness": [ -0.19, -0.11 ],
+            "erosion": [ -1.0, 1.0 ],
+            "weirdness": [ -1.0, 1.0 ],
+            "depth": 0.0,
+            "offset": 0.0
+          }
+        },
+        {
+          "biome": "candycraftreborn:candy_cold_forest",
+          "parameters": {
+            "temperature": [ -0.45, -0.15 ],
+            "humidity": [ 0.0, 0.35 ],
+            "continentalness": [ -0.11, 1.0 ],
+            "erosion": [ -1.0, 1.0 ],
+            "weirdness": [ -1.0, 1.0 ],
+            "depth": 0.0,
+            "offset": 0.0
+          }
+        },
+        {
+          "biome": "candycraftreborn:candy_frost_plains",
+          "parameters": {
+            "temperature": [ -0.45, -0.15 ],
+            "humidity": [ -0.35, 0.0 ],
+            "continentalness": [ -0.11, 1.0 ],
+            "erosion": [ -1.0, 1.0 ],
+            "weirdness": [ -1.0, 1.0 ],
+            "depth": 0.0,
+            "offset": 0.0
+          }
+        },
+        {
+          "biome": "candycraftreborn:candy_hell_forest",
+          "parameters": {
+            "temperature": [ 0.55, 1.0 ],
+            "humidity": [ -1.0, 1.0 ],
+            "continentalness": [ -0.11, 1.0 ],
+            "erosion": [ -1.0, 1.0 ],
+            "weirdness": [ -1.0, 1.0 ],
+            "depth": 0.0,
+            "offset": 0.0
+          }
+        },
+        {
+          "biome": "candycraftreborn:candy_void",
+          "parameters": {
+            "temperature": [ 0.55, 1.0 ],
+            "humidity": [ -1.0, -0.35 ],
+            "continentalness": [ 0.3, 1.0 ],
+            "erosion": [ -1.0, -0.4 ],
+            "weirdness": [ -1.0, 1.0 ],
+            "depth": 0.0,
+            "offset": 0.0
+          }
         }
       ]
     },

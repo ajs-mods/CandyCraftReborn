@@ -1,0 +1,76 @@
+{
+  "has_precipitation": false,
+  "temperature": 1.5,
+  "downfall": 0.0,
+  "effects": {
+    "fog_color": 16764031,
+    "water_color": 16772915,
+    "water_fog_color": 329011,
+    "sky_color": 16764031,
+    "foliage_color": 11558952,
+    "grass_color": 11558952
+  },
+  "spawners": {
+    "monster": [
+      {
+        "type": "candycraftreborn:suguard",
+        "weight": 100,
+        "minCount": 8,
+        "maxCount": 12
+      },
+      {
+        "type": "candycraftreborn:cotton_candy_spider",
+        "weight": 100,
+        "minCount": 4,
+        "maxCount": 12
+      },
+      {
+        "type": "candycraftreborn:candy_creeper",
+        "weight": 100,
+        "minCount": 8,
+        "maxCount": 15
+      }
+    ],
+    "creature": [],
+    "ambient": [],
+    "axolotls": [],
+    "underground_water_creature": [],
+    "water_creature": [],
+    "water_ambient": [],
+    "misc": []
+  },
+  "spawn_costs": {},
+  "carvers": {
+    "air": [
+      "candycraftreborn:candy_cave",
+      "candycraftreborn:candy_canyon"
+    ]
+  },
+  "features": [
+    [],
+    [
+      "candycraftreborn:water_lake",
+      "candycraftreborn:grenadine_lake",
+      "candycraftreborn:web_lake"
+    ],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      "candycraftreborn:ore_honey",
+      "candycraftreborn:ore_licorice",
+      "candycraftreborn:ore_jelly",
+      "candycraftreborn:ore_nougat",
+      "candycraftreborn:ore_pez",
+      "candycraftreborn:ore_chocolate_cobblestone",
+      "candycraftreborn:ore_flour"
+    ],
+    [],
+    [
+      "candycraftreborn:caramel_trees"
+    ],
+    []
+  ]
+}
