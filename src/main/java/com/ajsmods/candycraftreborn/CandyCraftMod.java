@@ -1,6 +1,6 @@
 package com.ajsmods.candycraftreborn;
 
-import com.ajsmods.candycraftreborn.client.NoopRenderer;
+import com.ajsmods.candycraftreborn.client.renderer.*;
 import com.ajsmods.candycraftreborn.client.screen.AlchemyTableScreen;
 import com.ajsmods.candycraftreborn.recipe.AlchemyRecipes;
 import com.ajsmods.candycraftreborn.registry.ModBlockEntities;
@@ -14,6 +14,7 @@ import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.entity.*;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -72,37 +73,50 @@ public class CandyCraftMod
     public static class ClientModEvents
     {
         @SubscribeEvent
-        @SuppressWarnings("unchecked")
+        @SuppressWarnings({"unchecked", "rawtypes"})
         public static void onRegisterRenderers(EntityRenderersEvent.RegisterRenderers event) {
-            // Passive mobs that extend vanilla types directly
-            event.registerEntityRenderer(ModEntities.CANDY_PIG.get(), PigRenderer::new);
-            event.registerEntityRenderer(ModEntities.WAFFLE_SHEEP.get(), NoopRenderer::new);
-            event.registerEntityRenderer(ModEntities.CANDY_FISH.get(), NoopRenderer::new);
-            // Hostile extending vanilla types
-            event.registerEntityRenderer(ModEntities.CANDY_CREEPER.get(), CreeperRenderer::new);
-            event.registerEntityRenderer(ModEntities.COTTON_CANDY_SPIDER.get(), SpiderRenderer::new);
-            // Everything else uses invisible placeholder until custom models are added
-            // These will spawn but render as invisible - use /summon to test AI
-            event.registerEntityRenderer(ModEntities.BUNNY.get(), NoopRenderer::new);
-            event.registerEntityRenderer(ModEntities.PINGOUIN.get(), NoopRenderer::new);
-            event.registerEntityRenderer(ModEntities.BEETLE.get(), NoopRenderer::new);
-            event.registerEntityRenderer(ModEntities.SUGUARD.get(), NoopRenderer::new);
-            event.registerEntityRenderer(ModEntities.CANDY_BEE.get(), NoopRenderer::new);
-            event.registerEntityRenderer(ModEntities.JELLY.get(), NoopRenderer::new);
-            event.registerEntityRenderer(ModEntities.YELLOW_JELLY.get(), NoopRenderer::new);
-            event.registerEntityRenderer(ModEntities.RED_JELLY.get(), NoopRenderer::new);
-            event.registerEntityRenderer(ModEntities.TORNADO_JELLY.get(), NoopRenderer::new);
-            // Wave 2 mobs
-            event.registerEntityRenderer(ModEntities.CANDY_WOLF.get(), NoopRenderer::new);
-            event.registerEntityRenderer(ModEntities.GINGER_BREAD_MAN.get(), NoopRenderer::new);
-            event.registerEntityRenderer(ModEntities.NOUGAT_GOLEM.get(), NoopRenderer::new);
-            event.registerEntityRenderer(ModEntities.MAGE_SUGUARD.get(), NoopRenderer::new);
-            event.registerEntityRenderer(ModEntities.MERMAID.get(), NoopRenderer::new);
-            event.registerEntityRenderer(ModEntities.NESSIE.get(), NoopRenderer::new);
-            event.registerEntityRenderer(ModEntities.DRAGON.get(), NoopRenderer::new);
-            event.registerEntityRenderer(ModEntities.KING_BEETLE.get(), NoopRenderer::new);
+            // Passive mobs — custom retextured vanilla renderers
+            event.registerEntityRenderer(ModEntities.CANDY_PIG.get(), CandyPigRenderer::new);
+            event.registerEntityRenderer(ModEntities.WAFFLE_SHEEP.get(), (EntityRendererProvider) WaffleSheepRenderer::new);
+            event.registerEntityRenderer(ModEntities.CANDY_FISH.get(), (EntityRendererProvider) CandyFishRenderer::new);
+            event.registerEntityRenderer(ModEntities.CANDY_WOLF.get(), CandyWolfRenderer::new);
+
+            // Hostile — custom retextured vanilla renderers
+            event.registerEntityRenderer(ModEntities.CANDY_CREEPER.get(), CandyCreeperRenderer::new);
+            event.registerEntityRenderer(ModEntities.COTTON_CANDY_SPIDER.get(), CottonCandySpiderRenderer::new);
+
+            // Unique mobs — vanilla model-based renderers with custom textures
+            event.registerEntityRenderer(ModEntities.BUNNY.get(), (EntityRendererProvider) BunnyRenderer::new);
+            event.registerEntityRenderer(ModEntities.PINGOUIN.get(), (EntityRendererProvider) PingouinRenderer::new);
+            event.registerEntityRenderer(ModEntities.BEETLE.get(), (EntityRendererProvider) BeetleRenderer::new);
+            event.registerEntityRenderer(ModEntities.CANDY_BEE.get(), (EntityRendererProvider) CandyBeeRenderer::new);
+            event.registerEntityRenderer(ModEntities.NESSIE.get(), (EntityRendererProvider) NessieRenderer::new);
+            event.registerEntityRenderer(ModEntities.DRAGON.get(), (EntityRendererProvider) DragonRenderer::new);
+            event.registerEntityRenderer(ModEntities.KING_BEETLE.get(), (EntityRendererProvider) KingBeetleRenderer::new);
+            event.registerEntityRenderer(ModEntities.NOUGAT_GOLEM.get(), (EntityRendererProvider) NougatGolemRenderer::new);
+
+            // Humanoid mobs
+            event.registerEntityRenderer(ModEntities.SUGUARD.get(),
+                    (EntityRendererProvider) ctx -> new CandyHumanoidRenderer<>(ctx, new ResourceLocation(MODID, "textures/entity/suguard.png")));
+            event.registerEntityRenderer(ModEntities.MAGE_SUGUARD.get(),
+                    (EntityRendererProvider) ctx -> new CandyHumanoidRenderer<>(ctx, new ResourceLocation(MODID, "textures/entity/mage_suguard.png")));
+            event.registerEntityRenderer(ModEntities.GINGER_BREAD_MAN.get(),
+                    (EntityRendererProvider) ctx -> new CandyHumanoidRenderer<>(ctx, new ResourceLocation(MODID, "textures/entity/ginger_bread_man.png")));
+            event.registerEntityRenderer(ModEntities.MERMAID.get(),
+                    (EntityRendererProvider) ctx -> new CandyHumanoidRenderer<>(ctx, new ResourceLocation(MODID, "textures/entity/mermaid.png")));
+
+            // Jelly mobs — slime model
+            event.registerEntityRenderer(ModEntities.JELLY.get(),
+                    ctx -> new JellyRenderer<>(ctx, new ResourceLocation(MODID, "textures/entity/jelly.png")));
+            event.registerEntityRenderer(ModEntities.YELLOW_JELLY.get(),
+                    ctx -> new JellyRenderer<>(ctx, new ResourceLocation(MODID, "textures/entity/yellow_jelly.png")));
+            event.registerEntityRenderer(ModEntities.RED_JELLY.get(),
+                    ctx -> new JellyRenderer<>(ctx, new ResourceLocation(MODID, "textures/entity/red_jelly.png")));
+            event.registerEntityRenderer(ModEntities.TORNADO_JELLY.get(),
+                    ctx -> new JellyRenderer<>(ctx, new ResourceLocation(MODID, "textures/entity/tornado_jelly.png")));
+
             // Projectiles
-            event.registerEntityRenderer(ModEntities.CANDY_ARROW.get(), NoopRenderer::new);
+            event.registerEntityRenderer(ModEntities.CANDY_ARROW.get(), (EntityRendererProvider) TippableArrowRenderer::new);
             event.registerEntityRenderer(ModEntities.DYNAMITE_ENTITY.get(), ThrownItemRenderer::new);
             event.registerEntityRenderer(ModEntities.GLUE_DYNAMITE_ENTITY.get(), ThrownItemRenderer::new);
             event.registerEntityRenderer(ModEntities.GUMMY_BALL.get(), ThrownItemRenderer::new);
