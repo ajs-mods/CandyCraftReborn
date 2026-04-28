@@ -1,5 +1,6 @@
 package com.ajsmods.candycraftreborn.entity;
 
+import com.ajsmods.candycraftreborn.registry.ModBlocks;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
@@ -7,6 +8,7 @@ import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.*;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
@@ -14,18 +16,22 @@ import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.phys.AABB;
 
 import javax.annotation.Nullable;
 import java.util.List;
+import java.util.UUID;
 
 public class BeetleEntity extends Monster {
     private static final EntityDataAccessor<Boolean> IS_ANGRY =
             SynchedEntityData.defineId(BeetleEntity.class, EntityDataSerializers.BOOLEAN);
     private static final EntityDataAccessor<Boolean> IS_CHILD =
             SynchedEntityData.defineId(BeetleEntity.class, EntityDataSerializers.BOOLEAN);
+
+    private static final UUID ENRAGE_SPEED_UUID = UUID.fromString("b3f53a1e-7c4d-4e2f-9a1b-5c8d6f7e0a12");
 
     public BeetleEntity(EntityType<? extends Monster> type, Level level) {
         super(type, level);
@@ -61,7 +67,12 @@ public class BeetleEntity extends Monster {
     public void setAngry(boolean angry) {
         this.entityData.set(IS_ANGRY, angry);
         if (angry) {
-            this.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(1.5);
+            // Use transient modifier for speed buff
+            var speedAttr = this.getAttribute(Attributes.MOVEMENT_SPEED);
+            if (speedAttr != null && speedAttr.getModifier(ENRAGE_SPEED_UUID) == null) {
+                speedAttr.addTransientModifier(new AttributeModifier(
+                        ENRAGE_SPEED_UUID, "Enrage speed boost", 0.5, AttributeModifier.Operation.MULTIPLY_TOTAL));
+            }
             this.getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(isBeetleChild() ? 7.0 : 15.0);
         }
     }
@@ -75,10 +86,20 @@ public class BeetleEntity extends Monster {
             AABB area = this.getBoundingBox().inflate(32.0);
             List<BeetleEntity> nearby = this.level().getEntitiesOfClass(BeetleEntity.class, area);
             for (BeetleEntity beetle : nearby) {
-                beetle.setAngry(true);
+                if (!beetle.isBeetleChild()) {
+                    beetle.setAngry(true);
+                }
             }
         }
         super.die(source);
+    }
+
+    @Override
+    protected void dropCustomDeathLoot(DamageSource source, int looting, boolean recentlyHit) {
+        super.dropCustomDeathLoot(source, looting, recentlyHit);
+        if (this.random.nextInt(80) == 0) {
+            this.spawnAtLocation(new ItemStack(ModBlocks.BEETLE_EGG_BLOCK.get()));
+        }
     }
 
     @Override

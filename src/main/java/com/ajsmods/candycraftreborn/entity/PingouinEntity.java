@@ -1,5 +1,6 @@
 package com.ajsmods.candycraftreborn.entity;
 
+import com.ajsmods.candycraftreborn.registry.ModBlocks;
 import com.ajsmods.candycraftreborn.registry.ModItems;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
@@ -19,6 +20,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.phys.Vec3;
 
 import javax.annotation.Nullable;
@@ -28,6 +30,8 @@ public class PingouinEntity extends Animal {
             SynchedEntityData.defineId(PingouinEntity.class, EntityDataSerializers.INT);
     private static final EntityDataAccessor<Boolean> IS_SUPER =
             SynchedEntityData.defineId(PingouinEntity.class, EntityDataSerializers.BOOLEAN);
+    private static final EntityDataAccessor<Integer> VARIANT =
+            SynchedEntityData.defineId(PingouinEntity.class, EntityDataSerializers.INT);
 
     public PingouinEntity(EntityType<? extends Animal> type, Level level) {
         super(type, level);
@@ -38,6 +42,7 @@ public class PingouinEntity extends Animal {
         super.defineSynchedData();
         this.entityData.define(COLOR, 0);
         this.entityData.define(IS_SUPER, false);
+        this.entityData.define(VARIANT, 0);
     }
 
     @Override
@@ -76,12 +81,35 @@ public class PingouinEntity extends Animal {
     public int getColor() { return this.entityData.get(COLOR) & 3; }
     public boolean isSuper() { return this.entityData.get(IS_SUPER); }
 
+    public int getVariant() { return this.entityData.get(VARIANT); }
+    public void setVariant(int v) { this.entityData.set(VARIANT, v % 3); }
+
+    @Override
+    public InteractionResult mobInteract(Player player, InteractionHand hand) {
+        ItemStack stack = player.getItemInHand(hand);
+        if (stack.is(ModItems.MARSHMALLOW_FLOWER.get())) {
+            if (!this.level().isClientSide) {
+                if (!player.getAbilities().instabuild) stack.shrink(1);
+                int count = 5 + this.random.nextInt(7); // 5-11
+                Block iceCreamBlock = switch (getVariant()) {
+                    case 1 -> ModBlocks.ICE_CREAM_STRAWBERRY.get();
+                    case 2 -> ModBlocks.ICE_CREAM_CHOCOLATE.get();
+                    default -> ModBlocks.ICE_CREAM_VANILLA.get();
+                };
+                this.spawnAtLocation(new ItemStack(iceCreamBlock, count));
+            }
+            return InteractionResult.sidedSuccess(this.level().isClientSide);
+        }
+        return super.mobInteract(player, hand);
+    }
+
     @Nullable
     @Override
     public SpawnGroupData finalizeSpawn(ServerLevelAccessor level, DifficultyInstance difficulty,
                                          MobSpawnType reason, @Nullable SpawnGroupData data, @Nullable CompoundTag tag) {
         this.entityData.set(COLOR, this.random.nextInt(3));
         this.entityData.set(IS_SUPER, this.random.nextInt(30) == 0);
+        this.setVariant(this.random.nextInt(3));
         return super.finalizeSpawn(level, difficulty, reason, data, tag);
     }
 
@@ -95,6 +123,7 @@ public class PingouinEntity extends Animal {
         super.addAdditionalSaveData(tag);
         tag.putInt("Color", getColor());
         tag.putBoolean("Super", isSuper());
+        tag.putInt("Variant", getVariant());
     }
 
     @Override
@@ -102,6 +131,7 @@ public class PingouinEntity extends Animal {
         super.readAdditionalSaveData(tag);
         this.entityData.set(COLOR, tag.getInt("Color"));
         this.entityData.set(IS_SUPER, tag.getBoolean("Super"));
+        this.setVariant(tag.getInt("Variant"));
     }
 
     @Override

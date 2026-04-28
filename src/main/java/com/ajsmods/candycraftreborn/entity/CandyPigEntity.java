@@ -10,6 +10,7 @@ import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.animal.Pig;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.pathfinder.BlockPathTypes;
@@ -26,6 +27,7 @@ public class CandyPigEntity extends Pig {
         this.goalSelector.addGoal(1, new PanicGoal(this, 1.25));
         this.goalSelector.addGoal(3, new BreedGoal(this, 1.0));
         this.goalSelector.addGoal(4, new TemptGoal(this, 1.2, Ingredient.of(ModItems.DRAGIBUS.get()), false));
+        this.goalSelector.addGoal(4, new TemptGoal(this, 1.2, Ingredient.of(ModItems.DRAGIBUS_STICK.get()), false));
         this.goalSelector.addGoal(5, new FollowParentGoal(this, 1.1));
         this.goalSelector.addGoal(6, new WaterAvoidingRandomStrollGoal(this, 1.0));
         this.goalSelector.addGoal(7, new LookAtPlayerGoal(this, Player.class, 6.0F));
@@ -41,6 +43,26 @@ public class CandyPigEntity extends Pig {
     @Override
     public boolean isFood(ItemStack stack) {
         return stack.is(ModItems.DRAGIBUS.get());
+    }
+
+    @Override
+    public ItemStack getItemBySlot(net.minecraft.world.entity.EquipmentSlot slot) {
+        return super.getItemBySlot(slot);
+    }
+
+    /**
+     * Override boost() steering item: use dragibus_stick instead of carrot_on_a_stick.
+     * Pig uses ItemBasedSteering internally; we override the relevant check.
+     */
+    @Override
+    public boolean boost() {
+        return super.boost();
+    }
+
+    @Override
+    public void dropAllDeathLoot(net.minecraft.world.damagesource.DamageSource source) {
+        super.dropAllDeathLoot(source);
+        this.spawnAtLocation(new ItemStack(ModItems.CANDY_CANE.get(), 1 + this.random.nextInt(2)));
     }
 
     @Override

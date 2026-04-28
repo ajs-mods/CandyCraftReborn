@@ -1,5 +1,6 @@
 package com.ajsmods.candycraftreborn.entity;
 
+import com.ajsmods.candycraftreborn.registry.ModItems;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
@@ -15,6 +16,7 @@ import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
 
@@ -26,6 +28,8 @@ public class SuguardEntity extends Monster {
 
     public SuguardEntity(EntityType<? extends Monster> type, Level level) {
         super(type, level);
+        // Hold licorice spear in hand for renderer
+        this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(ModItems.LICORICE_SPEAR.get()));
     }
 
     @Override
@@ -69,6 +73,15 @@ public class SuguardEntity extends Monster {
             this.setAngry(true);
         }
         return super.hurt(source, amount);
+    }
+
+    @Override
+    public void tick() {
+        super.tick();
+        // Water weakness: take 1 damage per second
+        if (!this.level().isClientSide && this.isInWater() && this.tickCount % 20 == 0) {
+            this.hurt(this.damageSources().drown(), 1.0F);
+        }
     }
 
     @Override
