@@ -53,10 +53,19 @@
     "misc": []
   },
   "spawn_costs": {},
-  "carvers": {},
+  "carvers": {
+    "air": [
+      "candycraftreborn:candy_cave",
+      "candycraftreborn:candy_canyon"
+    ]
+  },
   "features": [
     [],
-    [],
+    [
+      "candycraftreborn:water_lake",
+      "candycraftreborn:grenadine_lake",
+      "candycraftreborn:web_lake"
+    ],
     [],
     [],
     [],

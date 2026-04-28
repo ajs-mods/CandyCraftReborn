@@ -25,6 +25,7 @@ import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.core.registries.Registries;
+import com.ajsmods.candycraftreborn.world.CandyTeleporter;
 
 /**
  * CandyCraft portal block. Frame is built from Sugar Blocks.
@@ -73,8 +74,8 @@ public class CandyPortalBlock extends Block {
             ServerLevel targetLevel = server.getLevel(targetKey);
             if (targetLevel == null) return;
 
-            // Simple teleport — place player at same X/Z, Y=200 with fall protection
-            player.changeDimension(targetLevel);
+            // Teleport with custom ITeleporter — places at same X/Z, Y=200, grants Resistance
+            player.changeDimension(targetLevel, new CandyTeleporter());
         }
     }
 

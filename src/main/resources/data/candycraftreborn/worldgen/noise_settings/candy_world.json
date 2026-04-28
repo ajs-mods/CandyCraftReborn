@@ -215,6 +215,19 @@
       {
         "type": "minecraft:condition",
         "if_true": {
+          "type": "minecraft:vertical_gradient",
+          "random_name": "minecraft:bedrock_floor",
+          "true_at_and_below": { "above_bottom": 0 },
+          "false_at_and_above": { "above_bottom": 5 }
+        },
+        "then_run": {
+          "type": "minecraft:block",
+          "result_state": { "Name": "minecraft:bedrock" }
+        }
+      },
+      {
+        "type": "minecraft:condition",
+        "if_true": {
           "type": "minecraft:stone_depth",
           "offset": 0,
           "surface_type": "floor",
@@ -230,10 +243,28 @@
             "add_stone_depth": false
           },
           "then_run": {
-            "type": "minecraft:block",
-            "result_state": {
-              "Name": "candycraftreborn:pudding"
-            }
+            "type": "minecraft:sequence",
+            "sequence": [
+              {
+                "type": "minecraft:condition",
+                "if_true": {
+                  "type": "minecraft:biome",
+                  "biome_is": [
+                    "candycraftreborn:candy_ice_cream_plains",
+                    "candycraftreborn:candy_ice_cream_forest",
+                    "candycraftreborn:candy_sky_mountains"
+                  ]
+                },
+                "then_run": {
+                  "type": "minecraft:block",
+                  "result_state": { "Name": "candycraftreborn:ice_cream_vanilla" }
+                }
+              },
+              {
+                "type": "minecraft:block",
+                "result_state": { "Name": "candycraftreborn:pudding" }
+              }
+            ]
           }
         }
       },
@@ -248,9 +279,7 @@
         },
         "then_run": {
           "type": "minecraft:block",
-          "result_state": {
-            "Name": "candycraftreborn:flour"
-          }
+          "result_state": { "Name": "candycraftreborn:flour" }
         }
       }
     ]

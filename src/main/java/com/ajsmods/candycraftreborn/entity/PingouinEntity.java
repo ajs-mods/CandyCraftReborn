@@ -58,7 +58,7 @@ public class PingouinEntity extends Animal {
     }
 
     public static AttributeSupplier.Builder createAttributes() {
-        return Animal.createLivingAttributes()
+        return Animal.createMobAttributes()
                 .add(Attributes.MAX_HEALTH, 20.0)
                 .add(Attributes.MOVEMENT_SPEED, 0.5)
                 .add(Attributes.FOLLOW_RANGE, 16.0);

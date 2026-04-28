@@ -51,7 +51,7 @@ public class WaffleSheepEntity extends Animal {
     }
 
     public static AttributeSupplier.Builder createAttributes() {
-        return Animal.createLivingAttributes()
+        return Animal.createMobAttributes()
                 .add(Attributes.MAX_HEALTH, 10.0)
                 .add(Attributes.MOVEMENT_SPEED, 0.23)
                 .add(Attributes.FOLLOW_RANGE, 16.0);
