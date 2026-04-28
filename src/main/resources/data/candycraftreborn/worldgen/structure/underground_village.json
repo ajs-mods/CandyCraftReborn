@@ -1,0 +1,6 @@
+{
+  "type": "candycraftreborn:underground_village",
+  "biomes": "#candycraftreborn:has_structure/underground_village",
+  "step": "underground_structures",
+  "spawn_overrides": {}
+}

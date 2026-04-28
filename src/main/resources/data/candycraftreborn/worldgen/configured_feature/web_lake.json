@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:lake",
+  "config": {
+    "fluid": {
+      "type": "minecraft:simple_state_provider",
+      "state": { "Name": "candycraftreborn:cotton_candy_web" }
+    },
+    "barrier": {
+      "type": "minecraft:simple_state_provider",
+      "state": { "Name": "candycraftreborn:flour" }
+    }
+  }
+}

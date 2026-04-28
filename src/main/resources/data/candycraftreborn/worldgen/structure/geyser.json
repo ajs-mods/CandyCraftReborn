@@ -1,0 +1,6 @@
+{
+  "type": "candycraftreborn:geyser",
+  "biomes": "#candycraftreborn:has_structure/geyser",
+  "step": "surface_structures",
+  "spawn_overrides": {}
+}

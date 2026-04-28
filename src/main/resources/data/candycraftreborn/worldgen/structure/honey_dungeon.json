@@ -1,0 +1,6 @@
+{
+  "type": "candycraftreborn:honey_dungeon",
+  "biomes": "#candycraftreborn:has_structure/honey_dungeon",
+  "step": "underground_structures",
+  "spawn_overrides": {}
+}

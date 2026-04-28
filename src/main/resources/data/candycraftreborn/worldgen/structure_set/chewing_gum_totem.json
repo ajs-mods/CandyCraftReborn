@@ -1,0 +1,4 @@
+{
+  "structures": [{ "structure": "candycraftreborn:chewing_gum_totem", "weight": 1 }],
+  "placement": { "type": "minecraft:random_spread", "spacing": 50, "separation": 30, "salt": 562347891 }
+}

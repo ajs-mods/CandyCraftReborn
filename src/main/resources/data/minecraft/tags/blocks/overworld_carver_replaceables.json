@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "candycraftreborn:chocolate_stone",
+    "candycraftreborn:chocolate_cobblestone",
+    "candycraftreborn:pudding",
+    "candycraftreborn:flour",
+    "candycraftreborn:ice_cream_vanilla",
+    "candycraftreborn:ice_cream_strawberry",
+    "candycraftreborn:ice_cream_chocolate",
+    "candycraftreborn:ice_cream_mint"
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "type": "candycraftreborn:water_temple",
+  "biomes": "#candycraftreborn:has_structure/water_temple",
+  "step": "surface_structures",
+  "spawn_overrides": {}
+}

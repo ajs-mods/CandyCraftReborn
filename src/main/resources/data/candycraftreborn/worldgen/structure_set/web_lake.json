@@ -1,0 +1,4 @@
+{
+  "structures": [{ "structure": "candycraftreborn:web_lake", "weight": 1 }],
+  "placement": { "type": "minecraft:random_spread", "spacing": 20, "separation": 8, "salt": 653218974 }
+}

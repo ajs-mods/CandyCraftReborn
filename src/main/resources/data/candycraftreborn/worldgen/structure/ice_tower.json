@@ -1,0 +1,6 @@
+{
+  "type": "candycraftreborn:ice_tower",
+  "biomes": "#candycraftreborn:has_structure/ice_tower",
+  "step": "surface_structures",
+  "spawn_overrides": {}
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "candycraftreborn:jelly_sentry_key"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:entity_properties",
+          "predicate": {},
+          "entity": "this"
+        }
+      ]
+    }
+  ]
+}

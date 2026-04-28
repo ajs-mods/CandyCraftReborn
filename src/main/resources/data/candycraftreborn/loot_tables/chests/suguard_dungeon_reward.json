@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "minecraft:item", "name": "candycraftreborn:jelly_crown" }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "minecraft:item", "name": "candycraftreborn:suguard_boss_key" }
+      ]
+    },
+    {
+      "rolls": { "min": 5, "max": 9 },
+      "entries": [
+        { "type": "minecraft:item", "name": "candycraftreborn:sugar_crystal", "weight": 10, "functions": [{ "function": "minecraft:set_count", "count": { "min": 2, "max": 8 } }] },
+        { "type": "minecraft:item", "name": "candycraftreborn:licorice", "weight": 10, "functions": [{ "function": "minecraft:set_count", "count": { "min": 4, "max": 16 } }] },
+        { "type": "minecraft:item", "name": "candycraftreborn:candy_cane", "weight": 10, "functions": [{ "function": "minecraft:set_count", "count": { "min": 4, "max": 16 } }] },
+        { "type": "minecraft:item", "name": "candycraftreborn:chocolate_coin", "weight": 8, "functions": [{ "function": "minecraft:set_count", "count": { "min": 8, "max": 32 } }] },
+        { "type": "minecraft:item", "name": "candycraftreborn:pez", "weight": 5, "functions": [{ "function": "minecraft:set_count", "count": { "min": 1, "max": 4 } }] },
+        { "type": "minecraft:item", "name": "candycraftreborn:gummy", "weight": 8, "functions": [{ "function": "minecraft:set_count", "count": { "min": 4, "max": 16 } }] },
+        { "type": "minecraft:item", "name": "candycraftreborn:lollipop_seeds", "weight": 6, "functions": [{ "function": "minecraft:set_count", "count": { "min": 2, "max": 8 } }] },
+        { "type": "minecraft:item", "name": "candycraftreborn:cotton_candy", "weight": 8, "functions": [{ "function": "minecraft:set_count", "count": { "min": 4, "max": 16 } }] },
+        { "type": "minecraft:item", "name": "candycraftreborn:fork", "weight": 3 },
+        { "type": "minecraft:item", "name": "candycraftreborn:dragon_egg_block", "weight": 1 }
+      ]
+    }
+  ]
+}

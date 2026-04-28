@@ -1,0 +1,6 @@
+{
+  "type": "candycraftreborn:chewing_gum_totem",
+  "biomes": "#candycraftreborn:has_structure/chewing_gum_totem",
+  "step": "surface_structures",
+  "spawn_overrides": {}
+}

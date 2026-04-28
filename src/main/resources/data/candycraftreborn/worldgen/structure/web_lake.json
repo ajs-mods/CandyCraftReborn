@@ -1,0 +1,6 @@
+{
+  "type": "candycraftreborn:web_lake",
+  "biomes": "#candycraftreborn:has_structure/web_lake",
+  "step": "underground_structures",
+  "spawn_overrides": {}
+}

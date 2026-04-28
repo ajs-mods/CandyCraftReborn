@@ -1,0 +1,4 @@
+{
+  "structures": [{ "structure": "candycraftreborn:geyser", "weight": 1 }],
+  "placement": { "type": "minecraft:random_spread", "spacing": 30, "separation": 15, "salt": 741598263 }
+}

@@ -1,0 +1,6 @@
+{
+  "type": "candycraftreborn:candy_house",
+  "biomes": "#candycraftreborn:has_structure/candy_house",
+  "step": "surface_structures",
+  "spawn_overrides": {}
+}
