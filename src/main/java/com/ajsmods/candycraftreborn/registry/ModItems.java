@@ -1,7 +1,9 @@
 package com.ajsmods.candycraftreborn.registry;
 
 import com.ajsmods.candycraftreborn.CandyCraftMod;
+import com.ajsmods.candycraftreborn.item.DungeonKeyItem;
 import com.ajsmods.candycraftreborn.item.SugarPillItem;
+import com.ajsmods.candycraftreborn.world.dungeon.DungeonType;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.AxeItem;
@@ -261,9 +263,9 @@ public final class ModItems {
 
     // ── Keys ─────────────────────────────────────────────────────────────────
     public static final RegistryObject<Item> JELLY_KEY = ITEMS.register("jelly_key",
-        () -> new Item(new Item.Properties().stacksTo(1)));
+        () -> new DungeonKeyItem(DungeonType.SLIME, new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> SUGUARD_KEY = ITEMS.register("suguard_key",
-        () -> new Item(new Item.Properties().stacksTo(1)));
+        () -> new DungeonKeyItem(DungeonType.SUGUARD, new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> SKY_KEY = ITEMS.register("sky_key",
         () -> new Item(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> BEETLE_KEY = ITEMS.register("beetle_key",

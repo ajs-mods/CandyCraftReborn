@@ -3,6 +3,9 @@ package com.ajsmods.candycraftreborn.block;
 import com.ajsmods.candycraftreborn.blockentity.TeleporterBlockEntity;
 import com.ajsmods.candycraftreborn.registry.ModBlockEntities;
 import net.minecraft.core.BlockPos;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.server.MinecraftServer;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -47,8 +50,23 @@ public class TeleporterBlock extends BaseEntityBlock {
             BlockEntity be = level.getBlockEntity(pos);
             if (be instanceof TeleporterBlockEntity teleporter && teleporter.hasTarget()) {
                 BlockPos target = teleporter.getTarget();
-                serverPlayer.teleportTo(target.getX() + 0.5, target.getY() + 1.0, target.getZ() + 0.5);
-                return InteractionResult.CONSUME;
+                ResourceKey<Level> targetDim = teleporter.getTargetDimension();
+
+                if (targetDim != null && targetDim != level.dimension()) {
+                    MinecraftServer server = level.getServer();
+                    if (server != null) {
+                        ServerLevel targetLevel = server.getLevel(targetDim);
+                        if (targetLevel != null) {
+                            serverPlayer.teleportTo(targetLevel,
+                                    target.getX() + 0.5, target.getY() + 1.0, target.getZ() + 0.5,
+                                    serverPlayer.getYRot(), serverPlayer.getXRot());
+                            return InteractionResult.CONSUME;
+                        }
+                    }
+                } else {
+                    serverPlayer.teleportTo(target.getX() + 0.5, target.getY() + 1.0, target.getZ() + 0.5);
+                    return InteractionResult.CONSUME;
+                }
             }
         }
         return InteractionResult.sidedSuccess(level.isClientSide);
