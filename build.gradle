@@ -84,6 +84,8 @@ minecraft {
         client {
             // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
             property 'forge.enabledGameTestNamespaces', mod_id
+            // Disable early window to avoid SIGSEGV in AppleMetalOpenGLRenderer on macOS
+            jvmArg '-Dfml.earlyWindowControl=false'
         }
 
         server {
