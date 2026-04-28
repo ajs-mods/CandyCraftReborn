@@ -81,4 +81,21 @@ public class SugarFactoryMenu extends AbstractContainerMenu {
         return stillValid(levelAccess, player, ModBlocks.SUGAR_FACTORY.get())
                 || stillValid(levelAccess, player, ModBlocks.ADVANCED_SUGAR_FACTORY.get());
     }
+
+    public boolean isBurning() {
+        return data.get(0) > 0;
+    }
+
+    public int getBurnProgress() {
+        int burnDuration = data.get(1);
+        if (burnDuration == 0) burnDuration = 200;
+        return data.get(0) * 13 / burnDuration;
+    }
+
+    public int getCookProgress() {
+        int processTime = data.get(2);
+        int processTimeTotal = data.get(3);
+        if (processTimeTotal == 0) return 0;
+        return processTime * 24 / processTimeTotal;
+    }
 }

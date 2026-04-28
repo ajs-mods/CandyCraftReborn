@@ -10,6 +10,7 @@ import com.ajsmods.candycraftreborn.registry.ModEntities;
 import com.ajsmods.candycraftreborn.registry.ModItems;
 import com.ajsmods.candycraftreborn.registry.ModMenus;
 import com.ajsmods.candycraftreborn.registry.ModSounds;
+import com.ajsmods.candycraftreborn.registry.ModEnchantments;
 import com.ajsmods.candycraftreborn.registry.ModStructures;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
@@ -51,6 +52,7 @@ public class CandyCraftMod
         ModCreativeTabs.register(modEventBus);
         ModSounds.register(modEventBus);
         ModStructures.register(modEventBus);
+        ModEnchantments.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
 
@@ -139,7 +141,10 @@ public class CandyCraftMod
         public static void onClientSetup(FMLClientSetupEvent event)
         {
             LOGGER.info("Client setup for {}", MODID);
-            event.enqueueWork(() -> MenuScreens.register(ModMenus.ALCHEMY_TABLE_MENU.get(), AlchemyTableScreen::new));
+            event.enqueueWork(() -> {
+                MenuScreens.register(ModMenus.ALCHEMY_TABLE_MENU.get(), AlchemyTableScreen::new);
+                MenuScreens.register(ModMenus.SUGAR_FACTORY_MENU.get(), com.ajsmods.candycraftreborn.client.screen.SugarFactoryScreen::new);
+            });
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
         }
     }
