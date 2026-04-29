@@ -5,10 +5,16 @@
   "effects": {
     "fog_color": 11587794,
     "water_color": 4159076,
-    "water_fog_color": 329011,
+    "water_fog_color": 16755455,
     "sky_color": 11587794,
     "foliage_color": 16737894,
-    "grass_color": 11595007
+    "grass_color": 11595007,
+    "particle": {
+      "options": {
+        "type": "minecraft:enchant"
+      },
+      "probability": 0.02
+    }
   },
   "spawners": {
     "monster": [

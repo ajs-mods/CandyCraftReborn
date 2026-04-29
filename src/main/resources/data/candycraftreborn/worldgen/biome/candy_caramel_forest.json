@@ -8,7 +8,13 @@
     "water_fog_color": 3350016,
     "sky_color": 16764031,
     "foliage_color": 11557928,
-    "grass_color": 11557928
+    "grass_color": 11557928,
+    "particle": {
+      "options": {
+        "type": "minecraft:flame"
+      },
+      "probability": 0.005
+    }
   },
   "spawners": {
     "monster": [

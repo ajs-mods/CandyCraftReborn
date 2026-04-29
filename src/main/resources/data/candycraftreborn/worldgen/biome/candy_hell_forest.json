@@ -5,10 +5,16 @@
   "effects": {
     "fog_color": 16764031,
     "water_color": 16772915,
-    "water_fog_color": 329011,
+    "water_fog_color": 16755455,
     "sky_color": 16764031,
     "foliage_color": 11558952,
-    "grass_color": 11558952
+    "grass_color": 11558952,
+    "particle": {
+      "options": {
+        "type": "minecraft:flame"
+      },
+      "probability": 0.005
+    }
   },
   "spawners": {
     "monster": [

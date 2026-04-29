@@ -5,10 +5,16 @@
   "effects": {
     "fog_color": 16636119,
     "water_color": 4159076,
-    "water_fog_color": 329011,
+    "water_fog_color": 16755455,
     "sky_color": 16636119,
     "foliage_color": 16737894,
-    "grass_color": 15641275
+    "grass_color": 15641275,
+    "particle": {
+      "options": {
+        "type": "minecraft:mycelium"
+      },
+      "probability": 0.01
+    }
   },
   "spawners": {
     "monster": [

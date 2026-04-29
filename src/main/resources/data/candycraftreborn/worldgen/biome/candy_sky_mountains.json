@@ -8,7 +8,13 @@
     "water_fog_color": 13421772,
     "sky_color": 16777215,
     "foliage_color": 16777215,
-    "grass_color": 16777215
+    "grass_color": 16777215,
+    "particle": {
+      "options": {
+        "type": "minecraft:snowflake"
+      },
+      "probability": 0.02
+    }
   },
   "spawners": {
     "monster": [
